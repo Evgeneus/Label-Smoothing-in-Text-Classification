@@ -5,6 +5,8 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import average_precision_score
 
 
 seed = 2020
@@ -77,9 +79,13 @@ for epoch in range(int(epochs)):
             _, y_pred = torch.max(outputs_test.data, 1)
             loss_test = criterion(outputs_test, y_test)
         precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average='binary', beta=1)
+        avg_precision = average_precision_score(y_test.numpy(), outputs_test.data.numpy()[:, 1])
+        roc_auc = roc_auc_score(y_test.numpy(), outputs_test.data.numpy()[:, 1])
         model.train()
 
         print('*Evaluation on test data, epoch {}*'.format(epoch))
+        print('Avg Precision: {:1.3f}'.format(avg_precision))
+        print('ROC AUC: {:1.3f}'.format(roc_auc))
         print('f1: {:1.3f}'.format(f1))
         print('Precision: {:1.3f}'.format(precision))
         print('Recall: {:1.3f}'.format(recall))
