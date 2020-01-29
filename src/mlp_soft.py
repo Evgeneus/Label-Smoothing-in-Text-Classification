@@ -1,119 +1,88 @@
 import torch
 from torch import nn
 from torch.autograd import Variable
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import average_precision_score
 
+from src.model import MLP1
+from src.data_loader import load_data_soft
+from src.utils import CrossEntropyLossSoft
 
 seed = 2020
-
-df = pd.read_csv('../data/GOP_REL_ONLY_cleaned_stem.csv')
-text_column = 'text'
-label_column = 'label'
-
-# Train test split
-X = df[['text', 'conf_neg', 'conf_pos']]
-y = df[label_column].values
-test_size = 0.3
-
 torch.manual_seed(seed)
-X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=seed,
-                                                    test_size=test_size, shuffle=True)
-
-y_train_soft = X_train[['conf_neg', 'conf_pos']].values
-y_train_soft = Variable(torch.LongTensor(y_train_soft))
-
-y_test_soft = Variable(torch.LongTensor(X_test[['conf_neg', 'conf_pos']].values))
-y_test = Variable(torch.LongTensor(y_test))
-
-X_train = X_train[text_column].values
-X_test = X_test[text_column].values
-
-print('Train size: {}'.format(X_train.shape))
-print('Test size: {}'.format(X_test.shape))
 
 
-tfidf = TfidfVectorizer(min_df=2, max_features=None,
-            strip_accents='unicode', analyzer='word', token_pattern=r'\w{1,}',
-            ngram_range=(1, 3), use_idf=1, smooth_idf=1, sublinear_tf=1,
-            stop_words=None, lowercase=False)
+if __name__ == "__main__":
+    file_path = '../data/GOP_REL_ONLY_cleaned_stem.csv'
+    text_column = 'text'
+    label_column = 'label'
 
-tfidf.fit(X_train)
-X_train_tfidf = tfidf.transform(X_train)
-X_test_tfidf = tfidf.transform(X_test)
+    # load and transform data
+    data = load_data_soft(file_path, text_column, label_column, seed)
+    X_train_tfidf, y_train_soft, y_train = data['train']
+    X_val_tfidf, y_val_soft, y_val = data['val']
+    X_test_tfidf, y_test_soft, y_test = data['test']
 
+    # transform data to tensors
+    y_train_soft = Variable(torch.FloatTensor(y_train_soft))
+    y_val_soft = Variable(torch.FloatTensor(y_val_soft))
+    y_test_soft = Variable(torch.FloatTensor(y_test_soft))
+    y_train = Variable(torch.LongTensor(y_train))
+    y_val = Variable(torch.LongTensor(y_val))
+    y_test = Variable(torch.LongTensor(y_test))
+    X_train_tfidf = Variable(torch.Tensor(X_train_tfidf.todense()))
+    X_val_tfidf = Variable(torch.Tensor(X_val_tfidf.todense()))
+    X_test_tfidf = Variable(torch.Tensor(X_test_tfidf.todense()))
 
-class LogisticRegression(torch.nn.Module):
-    def __init__(self, input_dim, output_dim):
-        super(LogisticRegression, self).__init__()
-        self.linear = torch.nn.Linear(input_dim, output_dim)
+    # parameters
+    epochs = 150
+    input_dim = X_train_tfidf.shape[1]
+    output_dim = 2
+    lr_rate = 0.05
+    weight_decay = 0.0001
+    class_weight = torch.Tensor([1, 3])
 
-    def forward(self, x):
-        outputs = self.linear(x)
-        return outputs
+    # define NNet and training process
+    model = MLP1(input_dim, output_dim)
+    criterion = CrossEntropyLossSoft(class_weight)
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate, weight_decay=weight_decay)
 
+    for epoch in range(int(epochs)):
+        model.train()
+        optimizer.zero_grad()
+        outputs = model(X_train_tfidf)
+        loss = criterion(outputs, y_train_soft)
+        loss.backward()
+        optimizer.step()
 
-def cross_entropy(pred, soft_targets, weight=torch.Tensor([1, 5])):
-    logsoftmax = nn.LogSoftmax()
-    return torch.mean(torch.sum(- soft_targets * weight * logsoftmax(pred), 1))
-
-epochs = 5000
-input_dim = X_train_tfidf.shape[1]
-output_dim = 2
-lr_rate = 0.05
-
-model = LogisticRegression(input_dim, output_dim)
-criterion = cross_entropy
-
-optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate, weight_decay=0.0001)
-
-X_train_tfidf = Variable(torch.Tensor(tfidf.transform(X_train).todense()))
-X_test_tfidf = Variable(torch.Tensor(tfidf.transform(X_test).todense()))
-
-for epoch in range(int(epochs)):
-    optimizer.zero_grad()
-    outputs = model(X_train_tfidf)
-    loss = criterion(outputs, y_train_soft)
-    loss.backward()
-    optimizer.step()
-    # print(loss)
-
-    if epoch % 20 == 0:
-        print(epoch)
+        # evaluate model on val data
         model.eval()
         with torch.no_grad():
-            # Get predictions from the maximum value
-            outputs_test = torch.sigmoid(model(X_test_tfidf))
-            _, y_pred = torch.max(outputs_test.data, 1)
-            loss_test = criterion(outputs_test, y_test_soft)
-        precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average='binary', beta=1)
-        model.train()
+            outputs_val = model(X_val_tfidf)
+            loss_val = criterion(outputs_val, y_val_soft)
+        print('Epoch {}. Train Loss : {:1.4f} | Val Loss: {:1.4f}'.format(epoch, loss, loss_val))
 
-        print('*Evaluation on test data, epoch {}*'.format(epoch))
-        print('f1: {:1.3f}'.format(f1))
-        print('Precision: {:1.3f}'.format(precision))
-        print('Recall: {:1.3f}'.format(recall))
-        print('train loss: ', loss)
-        print('test  loss: ', loss_test)
-        print('------------')
+    # evaluate on test data
+    model.eval()
+    with torch.no_grad():
+        outputs_test = model(X_test_tfidf)
+        loss_test_soft = criterion(outputs_test, y_test_soft)
+        CrossEntropyLossHard = torch.nn.CrossEntropyLoss(weight=class_weight)
+        loss_test_hard = CrossEntropyLossHard(outputs_test, y_test).item()
+        # Get predictions from the maximum value
+        _, y_pred = torch.max(torch.sigmoid(outputs_test).data, 1)
+    precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average='binary', beta=1)
+    avg_precision = average_precision_score(y_test.numpy(), outputs_test.data.numpy()[:, 1])
 
+    print('------------')
+    print('*Evaluation on test data, epoch {}*'.format(epoch))
+    print('Test Loss Soft: {:1.4f}'.format(loss_test_soft))
+    print('Test Loss Hard: {:1.4f}'.format(loss_test_hard))
+    print('F1: {:1.3f}'.format(f1))
+    print('Avg Precision: {:1.3f}'.format(avg_precision))
+    print('Precision: {:1.3f}'.format(precision))
+    print('Recall: {:1.3f}'.format(recall))
 
-# def smooth_one_hot(true_labels: torch.Tensor, classes: int, smoothing=0.0):
-#     """
-#     if smoothing == 0, it's one-hot method
-#     if 0 < smoothing < 1, it's smooth method
-#
-#     """
-#     assert 0 <= smoothing < 1
-#     confidence = 1.0 - smoothing
-#     label_shape = torch.Size((true_labels.size(0), classes))
-#     with torch.no_grad():
-#         true_dist = torch.empty(size=label_shape, device=true_labels.device)
-#         true_dist.fill_(smoothing / (classes - 1))
-#         true_dist.scatter_(1, true_labels.data.unsqueeze(1), confidence)
-#     return true_dist
 
 
 

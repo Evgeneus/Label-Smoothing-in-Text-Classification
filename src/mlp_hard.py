@@ -57,7 +57,7 @@ if __name__ == "__main__":
     model.eval()
     with torch.no_grad():
         outputs_test = model(X_test_tfidf)
-        loss_test = criterion(outputs_test, y_test)
+        loss_test = criterion(outputs_test, y_test).item()
         # Get predictions from the maximum value
         _, y_pred = torch.max(torch.sigmoid(outputs_test).data, 1)
     precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average='binary', beta=1)
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
     print('------------')
     print('*Evaluation on test data, epoch {}*'.format(epoch))
-    print('Test Loss: ', loss_test)
+    print('Test Loss: {:1.4}'.format(loss_test))
     print('F1: {:1.3f}'.format(f1))
     print('Avg Precision: {:1.3f}'.format(avg_precision))
     print('Precision: {:1.3f}'.format(precision))
