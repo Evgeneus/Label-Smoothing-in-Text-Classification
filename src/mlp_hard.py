@@ -1,11 +1,11 @@
 import torch
 from torch.autograd import Variable
 from sklearn.metrics import precision_recall_fscore_support
-from sklearn.metrics import roc_auc_score
 from sklearn.metrics import average_precision_score
 
 from src.model import MLP1
 from src.data_loader import load_data_hard
+from src.utils import ece_score, plot_reliability_diagram
 
 seed = 2020
 torch.manual_seed(seed)
@@ -51,7 +51,11 @@ if __name__ == "__main__":
         with torch.no_grad():
             outputs_val = model(X_val_tfidf)
             loss_val = criterion(outputs_val, y_val)
-        print('Epoch {}. Train Loss : {:1.3f} | Val Loss: {:1.3f}'.format(epoch, loss, loss_val))
+            ece_val = ece_score(y_val.numpy(), torch.sigmoid(outputs_val)[:, 1].numpy())
+            _, y_pred = torch.max(torch.sigmoid(outputs_val).data, 1)
+            _, _, f1_val, _ = precision_recall_fscore_support(y_val, y_pred, average='binary', beta=1)
+        print('Epoch {}. Train Loss : {:1.3f} | Val Loss: {:1.3f} | Val ECE: {:1.3f} | Val F1: {:1.4}'
+              .format(epoch, loss, loss_val, ece_val, f1_val))
 
     # evaluate on test data
     model.eval()
@@ -60,12 +64,14 @@ if __name__ == "__main__":
         loss_test = criterion(outputs_test, y_test).item()
         # Get predictions from the maximum value
         _, y_pred = torch.max(torch.sigmoid(outputs_test).data, 1)
+    ece_test = ece_score(y_test.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy())
     precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average='binary', beta=1)
     avg_precision = average_precision_score(y_test.numpy(), outputs_test.data.numpy()[:, 1])
-    roc_auc = roc_auc_score(y_test.numpy(), outputs_test.data.numpy()[:, 1])
 
+    # plot_reliability_diagram(y_test.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy())
     print('------------')
     print('*Evaluation on test data, epoch {}*'.format(epoch))
+    print('Test ECE: {:1.4f}'.format(ece_test))
     print('Test Loss: {:1.4}'.format(loss_test))
     print('F1: {:1.3f}'.format(f1))
     print('Avg Precision: {:1.3f}'.format(avg_precision))

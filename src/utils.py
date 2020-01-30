@@ -1,5 +1,7 @@
 import torch
 from torch import nn
+from netcal.presentation import ReliabilityDiagram
+from netcal.metrics import ECE
 
 
 class CrossEntropyLossSoft(nn.Module):
@@ -29,3 +31,15 @@ def smooth_one_hot(true_labels: torch.Tensor, classes: int, smoothing=0.0):
         true_dist.scatter_(1, true_labels.data.unsqueeze(1), confidence)
 
     return true_dist
+
+
+def ece_score(y_true, y_prob, n_bins=10):
+    ece = ECE(n_bins)
+    ece_val = ece.measure(y_prob, y_true)
+
+    return ece_val
+
+
+def plot_reliability_diagram(y_true, y_prob, n_bins=10):
+    diagram = ReliabilityDiagram(n_bins)
+    diagram.plot(y_prob, y_true)
