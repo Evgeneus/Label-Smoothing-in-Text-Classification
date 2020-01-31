@@ -1,6 +1,24 @@
 import pandas as pd
+import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
+from sklearn.utils import shuffle
+
+
+def balanced_subsample(y, seed=None):
+    y_pos_ind = np.where(y == 1)[0]
+    y_neg_ind = np.where(y == 0)[0]
+    num_smp = y_pos_ind.shape[0]
+    np.random.seed(seed)
+    y_neg_ind_sampled = np.random.choice(y_neg_ind, size=num_smp, replace=False)
+
+    y_ind_sampled = np.concatenate((y_pos_ind, y_neg_ind_sampled))
+    y_neg_ind_left = np.asarray(list(set(y_neg_ind).symmetric_difference(y_neg_ind_sampled)))
+    # shuffle data
+    y_ind_sampled = shuffle(y_ind_sampled, random_state=seed)
+    y_neg_ind_left = shuffle(y_neg_ind_left, random_state=seed)
+
+    return y_ind_sampled, y_neg_ind_left
 
 
 def load_data_hard(file_path, text_column='text', label_column='label', seed=None, test_size=0.2):
@@ -16,6 +34,15 @@ def load_data_hard(file_path, text_column='text', label_column='label', seed=Non
     # train/val split
     X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, stratify=y_train, random_state=seed,
                                                       test_size=test_size, shuffle=True)
+
+    # undersample val/test data
+    ind_sampled_val, neg_ind_left_val = balanced_subsample(y_val, seed)
+    ind_sampled_test, neg_ind_left_test = balanced_subsample(y_test, seed)
+    X_train = np.concatenate((X_train, X_val[neg_ind_left_val], X_test[neg_ind_left_test]))
+    y_train = np.concatenate((y_train, y_val[neg_ind_left_val], y_test[neg_ind_left_test]))
+    X_train, y_train = shuffle(X_train, y_train, random_state=seed)
+    X_val, y_val = X_val[ind_sampled_val], y_val[ind_sampled_val]
+    X_test, y_test = X_test[ind_sampled_test], y_test[ind_sampled_test]
 
     tfidf = TfidfVectorizer(min_df=2, max_features=None,
                 strip_accents='unicode', analyzer='word', token_pattern=r'\w{1,}',
