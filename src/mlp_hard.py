@@ -2,7 +2,6 @@ import torch
 from torch.autograd import Variable
 from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import average_precision_score
-import numpy as np
 
 from src.model import MLP1
 from src.data_loader import load_data_hard
@@ -27,7 +26,7 @@ if __name__ == "__main__":
     X_test_tfidf = Variable(torch.Tensor(X_test_tfidf.todense()))
 
     # parameters
-    epochs = 200
+    epochs = 150
     input_dim = X_train_tfidf.shape[1]
     output_dim = 2
     lr_rate = 0.05
@@ -35,11 +34,11 @@ if __name__ == "__main__":
     # compute class weight
     # class_sample_count = np.unique(y_train, return_counts=True)[1]
     # class_weight_balanced = torch.FloatTensor(1. / class_sample_count)
-    class_weight_balanced = torch.Tensor([1, 10])
+    class_weight = torch.Tensor([1, 10])
 
     # define NNet and training process
     model = MLP1(input_dim, output_dim)
-    criterion = torch.nn.CrossEntropyLoss(weight=class_weight_balanced)  # computes softmax and then the cross entropy
+    criterion = torch.nn.CrossEntropyLoss(weight=class_weight)  # computes softmax and then the cross entropy
     criterion_val = torch.nn.CrossEntropyLoss()  # computes softmax and then the cross entropy
     optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate, weight_decay=weight_decay)
 

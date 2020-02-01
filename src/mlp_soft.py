@@ -45,11 +45,11 @@ if __name__ == "__main__":
     # compute class weight
     # class_sample_count = np.unique(y_train, return_counts=True)[1]
     # class_weight_balanced = torch.FloatTensor(1. / class_sample_count)
-    class_weight_balanced = torch.Tensor([1, 10])
+    class_weight = torch.Tensor([1, 10])
 
     # define NNet and training process
     model = MLP1(input_dim, output_dim)
-    criterion = CrossEntropyLossSoft(class_weight_balanced)
+    criterion = CrossEntropyLossSoft(class_weight)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate, weight_decay=weight_decay)
 
     for epoch in range(1, int(epochs)+1):
