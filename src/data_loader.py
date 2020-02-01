@@ -38,8 +38,8 @@ def load_data_hard(file_path, text_column='text', label_column='label', seed=Non
     # undersample val/test data
     ind_sampled_val, neg_ind_left_val = balanced_subsample(y_val, seed)
     ind_sampled_test, neg_ind_left_test = balanced_subsample(y_test, seed)
-    X_train = np.concatenate((X_train, X_val[neg_ind_left_val], X_test[neg_ind_left_test]))
-    y_train = np.concatenate((y_train, y_val[neg_ind_left_val], y_test[neg_ind_left_test]))
+    # X_train = np.concatenate((X_train, X_val[neg_ind_left_val], X_test[neg_ind_left_test]))
+    # y_train = np.concatenate((y_train, y_val[neg_ind_left_val], y_test[neg_ind_left_test]))
     X_train, y_train = shuffle(X_train, y_train, random_state=seed)
     X_val, y_val = X_val[ind_sampled_val], y_val[ind_sampled_val]
     X_test, y_test = X_test[ind_sampled_test], y_test[ind_sampled_test]
@@ -83,6 +83,18 @@ def load_data_soft(file_path, text_column='text', label_column='label', seed=Non
     X_train = X_train[text_column].values
     X_val = X_val[text_column].values
     X_test = X_test[text_column].values
+
+    # undersample val/test data
+    ind_sampled_val, neg_ind_left_val = balanced_subsample(y_val, seed)
+    ind_sampled_test, neg_ind_left_test = balanced_subsample(y_test, seed)
+
+    # X_train = np.concatenate((X_train, X_val[neg_ind_left_val], X_test[neg_ind_left_test]))
+    # y_train = np.concatenate((y_train, y_val[neg_ind_left_val], y_test[neg_ind_left_test]))
+    # y_train_soft = np.concatenate((y_train_soft, y_val_soft[neg_ind_left_val], y_test_soft[neg_ind_left_test]))
+
+    X_train, y_train, y_train_soft = shuffle(X_train, y_train, y_train_soft, random_state=seed)
+    X_val, y_val, y_val_soft = X_val[ind_sampled_val], y_val[ind_sampled_val], y_val_soft[ind_sampled_val]
+    X_test, y_test, y_test_soft = X_test[ind_sampled_test], y_test[ind_sampled_test], y_test_soft[ind_sampled_test]
 
     tfidf = TfidfVectorizer(min_df=2, max_features=None,
                 strip_accents='unicode', analyzer='word', token_pattern=r'\w{1,}',

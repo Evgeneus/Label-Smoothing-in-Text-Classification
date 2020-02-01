@@ -33,8 +33,9 @@ if __name__ == "__main__":
     lr_rate = 0.05
     weight_decay = 0.0001
     # compute class weight
-    class_sample_count = np.unique(y_train, return_counts=True)[1]
-    class_weight_balanced = torch.FloatTensor(1. / class_sample_count)
+    # class_sample_count = np.unique(y_train, return_counts=True)[1]
+    # class_weight_balanced = torch.FloatTensor(1. / class_sample_count)
+    class_weight_balanced = torch.Tensor([1, 10])
 
     # define NNet and training process
     model = MLP1(input_dim, output_dim)
