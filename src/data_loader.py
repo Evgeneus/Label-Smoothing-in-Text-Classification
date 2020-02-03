@@ -21,6 +21,31 @@ def balanced_subsample(y, seed=None):
     return y_ind_sampled, y_neg_ind_left
 
 
+def load_data_ml_hard(file_path, text_column='text', label_column='label', seed=None, test_size=0.2):
+    df = pd.read_csv(file_path)
+
+    # Train test split
+    X = df[text_column].values
+    y = df[label_column].values
+
+    # train/test split
+    X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, stratify=y, random_state=seed,
+                                                        test_size=test_size, shuffle=True)
+    # train/val split
+    X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, stratify=y_train_val, random_state=seed,
+                                                      test_size=test_size, shuffle=True)
+
+    # undersample val/test data
+    ind_sampled_val, neg_ind_left_val = balanced_subsample(y_val, seed)
+    ind_sampled_test, neg_ind_left_test = balanced_subsample(y_test, seed)
+    # X_train = np.concatenate((X_train, X_val[neg_ind_left_val], X_test[neg_ind_left_test]))
+    # y_train = np.concatenate((y_train, y_val[neg_ind_left_val], y_test[neg_ind_left_test]))
+    X_train, y_train = shuffle(X_train, y_train, random_state=seed)
+    X_test, y_test = X_test[ind_sampled_test], y_test[ind_sampled_test]
+
+    return X_train, y_train, X_train_val, y_train_val, X_test, y_test
+
+
 def load_data_hard(file_path, text_column='text', label_column='label', seed=None, test_size=0.2):
     df = pd.read_csv(file_path)
 
