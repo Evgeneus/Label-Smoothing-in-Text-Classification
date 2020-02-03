@@ -145,10 +145,10 @@ if __name__ == "__main__":
             c = 'epoch, loss_val, ece_val, f1_val, pre_val, rec_val, acc_val, lr_rate, weight_decay, class_weight'
             f.write(c + '\n')
 
-        epochs = 1000
-        for lr_rate in [0.05]:
-            for weight_decay in [0.0001]:
-                for class_weight in [10]:
+        epochs = 500
+        for lr_rate in [0.01, 0.01, 0.05, 0.001]:
+            for weight_decay in [0.1, 0.01, 0.001, 0.0001]:
+                for class_weight in [1, 3, 5, 7, 10, 12]:
                     class_weight = torch.Tensor([1, class_weight])
                     net_params = {
                         'lr_rate': lr_rate,
