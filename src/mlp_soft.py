@@ -21,6 +21,7 @@ def train_neural_net(net_params, tolerance=20):
 
     model = MLP1(input_dim, output_dim)
     criterion = CrossEntropyLossSoft(class_weight)
+    criterion_val = CrossEntropyLossSoft()
     optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate, weight_decay=weight_decay)
 
     # init early stopping
@@ -40,7 +41,7 @@ def train_neural_net(net_params, tolerance=20):
         model.eval()
         with torch.no_grad():
             outputs_val = model(X_val_tfidf)
-            loss_val = criterion(outputs_val, y_val_soft).item()
+            loss_val = criterion_val(outputs_val, y_val_soft).item()
             ece_val = ece_score(y_val.numpy(), torch.sigmoid(outputs_val)[:, 1].numpy())
             _, y_pred = torch.max(torch.sigmoid(outputs_val).data, 1)
             pre_val, rec_val, f1_val, _ = precision_recall_fscore_support(y_val, y_pred, average='binary', beta=1)
