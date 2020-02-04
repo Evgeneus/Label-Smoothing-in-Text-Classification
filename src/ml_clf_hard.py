@@ -31,9 +31,9 @@ def train_clf():
         }
     }
     param_vectorizer = {
-        'tfidf__max_features': [2000, 5000, None],
+        'tfidf__max_features': [15000, 20000, 25000, 30000],
         'tfidf__ngram_range': [(1, 2), (1, 3)],
-        'tfidf__min_df': [2, 3]
+        'tfidf__min_df': [0, 1, 2, 3]
     }
 
     # define pipeline
@@ -42,6 +42,7 @@ def train_clf():
                             ngram_range=(1, 3), use_idf=1, smooth_idf=1, sublinear_tf=1,
                             stop_words=None, lowercase=False)
     model = LogisticRegression(random_state=seed)
+    # model = LinearSVC(random_state=seed)
     pipeline = Pipeline([
         ('tfidf', tfidf),
         ('clf', model)])
@@ -75,6 +76,8 @@ def train_evaluate(params):
                                class_weight=params['class_weight'], random_state=seed)
     # model = LinearSVC(C=params['C'], penalty=params['penality'],
     #                   class_weight=params['class_weight'], random_state=seed)
+    # from sklearn.calibration import CalibratedClassifierCV
+    # model = CalibratedClassifierCV(model)
     model.fit(X_train_tfidf, y_train)
     y_pred = model.predict(X_test_tfidf)
     y_pred_proba = model.predict_proba(X_test_tfidf)[:, 1]
@@ -83,7 +86,7 @@ def train_evaluate(params):
     acc = accuracy_score(y_test, y_pred)
     ece = ece_score(y_test, y_pred_proba)
 
-    plot_reliability_diagram(y_test, y_pred_proba)
+    plot_reliability_diagram(y_test, y_pred_proba, title_suffix='LogisticRegression (ECE={:1.4f})'.format(ece))
     print('*Evaluation on test data, {}*'.format(model.__class__.__name__))
     print('F1: ', f1)
     print('ECE: {:1.4f}'.format(ece))

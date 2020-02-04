@@ -40,6 +40,6 @@ def ece_score(y_true, y_prob, n_bins=10):
     return ece_val
 
 
-def plot_reliability_diagram(y_true, y_prob, n_bins=10):
+def plot_reliability_diagram(y_true, y_prob, n_bins=10, title_suffix=''):
     diagram = ReliabilityDiagram(n_bins)
-    diagram.plot(y_prob, y_true)
+    diagram.plot(y_prob, y_true, title_suffix)
