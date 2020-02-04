@@ -96,7 +96,7 @@ def train_evaluate(net_params):
     ece_test = ece_score(y_test.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy())
     precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average='binary', beta=1)
 
-    plot_reliability_diagram(y_test.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy())
+    plot_reliability_diagram(y_test.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy(), title_suffix='MLP1-SemiSoft (ECE={:1.4f})'.format(ece_test))
     print('------------')
     print('*Evaluation on test data (SemiSoft), epoch {}*'.format(epoch))
     print('Test ECE: {:1.4f}'.format(ece_test))
