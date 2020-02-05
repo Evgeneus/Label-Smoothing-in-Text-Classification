@@ -3,7 +3,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 from sklearn.linear_model import LogisticRegression
-from sklearn.svm import LinearSVC
 
 from src.data_loader import load_data_ml_hard
 from src.utils import ece_score, plot_reliability_diagram
@@ -74,10 +73,6 @@ def train_evaluate(params):
 
     model = LogisticRegression(C=params['C'], penalty=params['penality'],
                                class_weight=params['class_weight'], random_state=seed)
-    # model = LinearSVC(C=params['C'], penalty=params['penality'],
-    #                   class_weight=params['class_weight'], random_state=seed)
-    # from sklearn.calibration import CalibratedClassifierCV
-    # model = CalibratedClassifierCV(model)
     model.fit(X_train_tfidf, y_train)
     y_pred = model.predict(X_test_tfidf)
     y_pred_proba = model.predict_proba(X_test_tfidf)[:, 1]
@@ -96,8 +91,8 @@ def train_evaluate(params):
 
 
 if __name__ == "__main__":
-    data_folder = '../data/'
-    dataset_file = 'GOP_REL_ONLY_cleaned_stem_confmin0.6.csv'
+    data_folder = '../data/binary/'
+    dataset_file = '1_gop_rel_only_cleaned_stem_confmin0.6.csv'
     dataset_path = data_folder + dataset_file
     text_column, label_column = 'text', 'label'
 

@@ -104,9 +104,9 @@ def train_evaluate(net_params):
 
 
 if __name__ == "__main__":
-    data_folder = '../data/'
+    data_folder = '../data/binary/'
     res_folder = '../res/'
-    dataset_file = 'GOP_REL_ONLY_cleaned_stem_confmin0.6.csv'
+    dataset_file = '1_gop_rel_only_cleaned_stem_confmin0.6.csv'
     dataset_path = data_folder + dataset_file
     res_path = res_folder + 'res_hard_' + dataset_file
     text_column, label_column = 'text', 'label'
