@@ -1,5 +1,35 @@
 import pandas as pd
+import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
+
+
+def load_data_ml_hard(dataset_files, data_folder, text_column='text', label_column='crowd_label'):
+    # train data
+    train_file = dataset_files[0]
+    assert 'train' in train_file
+    df_tr = pd.read_csv(data_folder + train_file)
+    X_train = df_tr[text_column].values
+    y_train_hard = df_tr[label_column].values
+
+    # validation data
+    val_file = dataset_files[1]
+    assert 'val' in val_file
+    df_val = pd.read_csv(data_folder + val_file)
+    X_val = df_val[text_column].values
+    y_val_hard = df_val[label_column].values
+
+    # concatenate train val data for Cross Validation
+    X_train_val = np.concatenate((X_train, X_val))
+    y_train_val_hard = np.concatenate((y_train_hard, y_val_hard))
+
+    # test data
+    test_file = dataset_files[2]
+    assert 'test' in test_file
+    df_test = pd.read_csv(data_folder + test_file)
+    X_test = df_test[text_column].values
+    y_test_hard = df_test['gold_label'].values
+
+    return X_train, y_train_hard, X_train_val, y_train_val_hard, X_test, y_test_hard
 
 
 def load_data_mlp(dataset_files, data_folder, text_column='text', label_column='crowd_label', min_df=2, max_features=None, ngram_range=(1, 3)):
