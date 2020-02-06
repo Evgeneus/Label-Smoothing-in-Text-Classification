@@ -110,7 +110,7 @@ if __name__ == "__main__":
     dataset_files = ['6_train_gop_rel_only_mclass.csv',
                      '6_val_gop_rel_only_mclass.csv',
                      '6_test_gop_rel_only_mclass.csv']
-    res_path = res_folder + 'res_hard_gop_rel_only_mclass'
+    res_path = res_folder + '6_res_hard_gop_rel_only_mclass'
 
     # load and transform data
     data_params = {
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     # transform data to tensors
     y_train_hard = Variable(torch.LongTensor(y_train_hard))
     y_val_hard = Variable(torch.LongTensor(y_val_hard))
-    y_test_hard= Variable(torch.LongTensor(y_test_hard))
+    y_test_hard = Variable(torch.LongTensor(y_test_hard))
     X_train_tfidf = Variable(torch.Tensor(X_train_tfidf))
     X_val_tfidf = Variable(torch.Tensor(X_val_tfidf))
     X_test_tfidf = Variable(torch.Tensor(X_test_tfidf))

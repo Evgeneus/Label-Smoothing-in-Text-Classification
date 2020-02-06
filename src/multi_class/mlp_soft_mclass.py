@@ -111,7 +111,7 @@ if __name__ == "__main__":
     dataset_files = ['6_train_gop_rel_only_mclass.csv',
                      '6_val_gop_rel_only_mclass.csv',
                      '6_test_gop_rel_only_mclass.csv']
-    res_path = res_folder + 'res_semisoft_gop_rel_only_mclass'
+    res_path = res_folder + '6_res_semisoft_gop_rel_only_mclass'
 
     # load and transform data
     data_params = {
