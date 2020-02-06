@@ -87,7 +87,8 @@ def train_evaluate(net_params):
     # evaluate model on test data
     with torch.no_grad():
         outputs_test = model(X_test_tfidf)
-        loss_test = criterion(outputs_test, y_test)
+        CrossEntropyLossHard = torch.nn.CrossEntropyLoss()
+        loss_test = CrossEntropyLossHard(outputs_test, y_test)
         # Get predictions from the maximum value
         _, y_pred = torch.max(torch.sigmoid(outputs_test).data, 1)
     ece_test = ece_score(y_test.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy())
