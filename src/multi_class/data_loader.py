@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
-def load_data_mlp(dataset_files, data_folder, text_column='text', label_column='label', min_df=2, max_features=None, ngram_range=(1, 3)):
+def load_data_mlp(dataset_files, data_folder, text_column='text', label_column='crowd_label', min_df=2, max_features=None, ngram_range=(1, 3)):
     # train data
     train_file = dataset_files[0]
     assert 'train' in train_file
@@ -36,7 +36,7 @@ def load_data_mlp(dataset_files, data_folder, text_column='text', label_column='
     assert 'test' in test_file
     df_test = pd.read_csv(data_folder + test_file)
     X_test = df_test[text_column].values
-    y_test_hard = df_test[label_column].values
+    y_test_hard = df_test['gold_label'].values
 
     # compute tfidf features
     tfidf = TfidfVectorizer(min_df=min_df, max_features=max_features,

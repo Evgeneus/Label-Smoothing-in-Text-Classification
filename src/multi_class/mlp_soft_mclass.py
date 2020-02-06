@@ -118,7 +118,7 @@ if __name__ == "__main__":
         'dataset_files': dataset_files,
         'data_folder': data_folder,
         'text_column': 'text',
-        'label_column': 'label',
+        'label_column': 'crowd_label',
         'min_df': 2,
         'max_features': None,
         'ngram_range': (1, 3)

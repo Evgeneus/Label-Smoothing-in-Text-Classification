@@ -117,7 +117,7 @@ if __name__ == "__main__":
         'dataset_files': dataset_files,
         'data_folder': data_folder,
         'text_column': 'text',
-        'label_column': 'label',
+        'label_column': 'crowd_label',
         'min_df': 2,
         'max_features': None,
         'ngram_range': (1, 3)
@@ -176,6 +176,6 @@ if __name__ == "__main__":
             'lr_rate': 0.05,
             'weight_decay': 0.0001,
             'class_weight': torch.Tensor([1, 5, 5]),
-            'epochs': 100
+            'epochs': 10
         }
         train_evaluate(net_params)
