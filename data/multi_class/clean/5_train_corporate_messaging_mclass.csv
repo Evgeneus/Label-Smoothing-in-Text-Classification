@@ -1,4 +1,4 @@
-text,label,conf0,conf1,conf2
+text,crowd_label,conf0,conf1,conf2
 barclay ceo stress import regulatori cultur reform financi servic brussel confer url_,0,1.0,0.0,0.0
 barclay announc result right issu url_,0,1.0,0.0,0.0
 barclay publish prospectu a5num8bn right issu url_,0,1.0,0.0,0.0
@@ -26,7 +26,6 @@ uiemploy must address fundament landscap chang workforc requir demandsu zain wad
 gen num2 seek financi educ guidanc say latest research view infograph detail url_,1,0.0,1.0,0.0
 visit us stand num3 mention_ see new way approach benefit workplac eblivenum4,1,0.0,1.0,0.0
 benefit strategi fail younger worker fit purpos employeeengag url_,0,1.0,0.0,0.0
-gen x place import compani pension scheme num2 valu num2 valu flexibl work hour find report url_,0,1.0,0.0,0.0
 babi boomer least demand gener num2 valu compani pension scheme num2 career develop say report url_,0,1.0,0.0,0.0
 latest research find num2 employe gener no access work-bas financi guidanc url_,0,1.0,0.0,0.0
 employe benefit fail meet expect todayua multigener workforc employeeengag url_,0,1.0,0.0,0.0
@@ -69,7 +68,6 @@ rt wsj wealth report rich use web mostli money food porn url_,0,1.0,0.0,0.0
 foundat endow need reconsid invest approach low return environ url_,0,1.0,0.0,0.0
 global cultur philanthropi attitud give url_,0,1.0,0.0,0.0
 rt mention_ rich donor ruin higher educ url_,0,1.0,0.0,0.0
-barclay wealth support 'women year award url_,0,1.0,0.0,0.0
 rt mention_ look top ten popular stock top ten trade last week url_,1,0.0,1.0,0.0
 rt mention_ invest viewpoint comment look activ drive market sentiment home away url_,0,1.0,0.0,0.0
 hard-work wealth holist wealth co-op wealth three theme futur url_,0,1.0,0.0,0.0
@@ -98,7 +96,6 @@ see daili research show recent market develop url_,1,0.0,1.0,0.0
 five day go till barclay jerseyboatshow return weekend pack energi event activ url_,0,1.0,0.0,0.0
 hayfestiv call young peopl num+ aspir film maker learn storyboard elmley foundat theatr hay url_,0,0.6569,0.17154999999999998,0.17154999999999998
 maturist concern pension save research show valu shape todayua workplac url_,0,1.0,0.0,0.0
-uth road safer cyclingua latest video ucycl cityua seri navig road safe url_,0,0.6656,0.16720000000000002,0.16720000000000002
 develop countri display higher level uncertainti next gener look wealth australia num2 us num2 url_,0,1.0,0.0,0.0
 entrepreneurship respons uk wealth uo barclay wealth insight url_,0,1.0,0.0,0.0
 mention_ discuss invest behalf someon els institut uo much risk right url_,0,0.6614,0.1693,0.1693
@@ -136,8 +133,6 @@ fantast award ceremoni wealth advisori proud finalist step privat client award m
 read privat funder well place invest innov approach help tackl social problem url_,1,0.16265000000000002,0.6747,0.16265000000000002
 rt wsj wealth report govern behind rise fortun rich url_,0,1.0,0.0,0.0
 barclay wealth win 'best overal privat bank uk euromoney privat bank award,0,1.0,0.0,0.0
-excit day would like thank guest attend follow tune congratul winner award,2,0.16670000000000001,0.16670000000000001,0.6666
-congratul juli dean mention_ win barclay outstand achiev award fasttracknum3 entrepreneur sme,2,0.16265000000000002,0.16265000000000002,0.6747
 congratul team mention_ win barclay one watch award fasttracknum3 entrepreneur sme,2,0.16860000000000003,0.16860000000000003,0.6628
 moment wait num award won present 'outstand achiev 'one watch,0,1.0,0.0,0.0
 q 's come end look forward award ceremoni later even stay tune good luck nomine,1,0.0,1.0,0.0
@@ -190,7 +185,6 @@ telegraph econom downturn fail dampen philanthropi url_,0,1.0,0.0,0.0
 ft.com go-gett becom go-giv barclay wealth 's 'tomorrow 's philanthropist studi report url_,0,1.0,0.0,0.0
 barclay wealth name wealth manag year global investor award,0,1.0,0.0,0.0
 monthua white paper explor barclay new entrepreneur index map busi activ wealth creation url_,0,1.0,0.0,0.0
-new barclay report track sharehold chang uk ireland busi measur entrepreneuri activ url_,0,1.0,0.0,0.0
 uwhat like ua check out monthua vaniti fair profil behaviouralfin team mention_ vanityfair,1,0.0,1.0,0.0
 rt mention_ final special thank sponsor mention_ walpolesummit,0,0.6614,0.1693,0.1693
 us feder reserv confirm buy bond uo right not necessarili url_,0,1.0,0.0,0.0
@@ -231,7 +225,6 @@ rt wsj wealth report report inequ hasn chang num2 year url_,0,1.0,0.0,0.0
 rt wsj wealth report one third millionair use social media url_,0,1.0,0.0,0.0
 barclay foundat spain help women risk social exclus find job url_,0,1.0,0.0,0.0
 barclay unicef partnership name oversea project year recent busi chariti award london url_,0,1.0,0.0,0.0
-rt mention_ downsid control-freak philanthropi url_,0,1.0,0.0,0.0
 barclay offer same-sex domest partner benefit equal url_,0,1.0,0.0,0.0
 barclay renew sponsorship premier leagu url_,0,1.0,0.0,0.0
 reuter philanthropi outlook upbeat not religi chariti url_,0,1.0,0.0,0.0
@@ -275,12 +268,9 @@ forb barclay wealth studi tomorrow 's philanthropist show women take lead philan
 forb barclay wealth studi tomorrow 's philanthropist show women take lead philanthropi url_,0,1.0,0.0,0.0
 final mention_ num ethic afford altern payday loan wage-back pay advanc url_,0,1.0,0.0,0.0
 num mention_ marketplac allow busi turn outstand invoic work capit url_,0,1.0,0.0,0.0
-num mention_ provid corpor safer cheaper way pay unbank employe barclaysaccel url_,0,1.0,0.0,0.0
 num mention_ singl platform negoti trade agreement deriv commod save cost url_,0,1.0,0.0,0.0
-behaviouralfin team work catherin bolgar mention_ seri op- view first url_,1,0.16425,0.6715,0.16425
 unevertireesua elderli american refus retir url_,0,1.0,0.0,0.0
 student year award winner url_,0,1.0,0.0,0.0
-rt wsj wealth report myth 'record-high inequ despit news report record-high inequ ... url_,0,0.6772,0.1614,0.1614
 rt wsj wealth report buffett 's call tax rich get 'record respons url_,0,1.0,0.0,0.0
 stay invest say barclay wealth despit market uncertainti continu favour develop equiti url_,0,1.0,0.0,0.0
 rt mention_ bright light big hedg funder christma come greenwich conn. mont ... url_,0,1.0,0.0,0.0
@@ -299,7 +289,6 @@ rt wsj wealth report 'high-beta rich fuel aspen fight high-beta rich fuel develo
 graduat see us busi manag fair nottingham univers num2numnum2-numnum2pm tomorrow,1,0.0,1.0,0.0
 huffington post cover new report philanthropi earli intervent url_,0,1.0,0.0,0.0
 watch barclay wealthua emma turner new philanthropi capitalua dan corri discuss new report philanthropi url_,1,0.16185,0.6763,0.16185
-hayfestiv goodby everyon leav hay today hope enjoy travel home safe url_,2,0.16525,0.16525,0.6695
 barclay wealth tell client add develop market stock url_,0,1.0,0.0,0.0
 rt mention_ rich work harder everyon els url_,0,0.6668,0.16660000000000003,0.16660000000000003
 rt mention_ top ten trade barclay stockbrok client saturday num june num4 friday num2 june num4 url_,0,0.6677,0.16615000000000002,0.16615000000000002
@@ -310,7 +299,6 @@ rt mention_ boe seen sustain crisi lifelin url_,0,1.0,0.0,0.0
 rt mention_ develop economi growth recognis gnum2 enough done boost recoveri url_,0,0.6735,0.16325,0.16325
 citi issu num4 global citizenship report read url_ citisustain,1,0.0,1.0,0.0
 citi 's num2bn climat chang initi surpass goal reach num2numnum2 billion read url_ citisustain,1,0.0,1.0,0.0
-citi proud announc reach num2yr/ num2bn climat chang initi 3yr earli url_ citisustain,0,1.0,0.0,0.0
 social media much much advic entrepreneur find balanc url_ via mention_,0,0.6675,0.16625,0.16625
 happi earthday citi 's green team act ambassador environment initi citisustain url_,0,1.0,0.0,0.0
 still foundat futur success built citi 's ceo corbat annual mtg url_,0,1.0,0.0,0.0
@@ -325,9 +313,7 @@ citiua mention_ craig keysaeon import small busi commun serv url_,0,1.0,0.0,0.0
 num must-read articl put kid right financi path citiua mention_ mention_ tctsnum4 url_,1,0.0,1.0,0.0
 educ workforc develop program key continu growth nyctecheconomi read url_,1,0.0,1.0,0.0
 latest investor relat news right e-mail inbox sign citi news alert url_,1,0.0,1.0,0.0
-strong cross-industri network enabl innov financialinclus watch url_ cfsinum2 mention_,1,0.0,1.0,0.0
 citi excit collabor wheel platform support invest energi effici mention_ url_,0,1.0,0.0,0.0
-kickstart rais african farmer out poverti sustainabletechnolog not aid url_ progressmak,0,1.0,0.0,0.0
 innov home energi effici loan financ platform collabor benefit u.s. homeown url_,0,1.0,0.0,0.0
 worker nyc tech ecosystem earn hourli wage num2 higher averag nyctecheconomi url_,0,1.0,0.0,0.0
 ui citi graham windham share mission num3yr histori strengthen communitiesnumumention_ mention_ url_,0,1.0,0.0,0.0
@@ -336,7 +322,6 @@ secret network success mention_ url_,1,0.16185,0.6763,0.16185
 didyouknow num worker nyc tech job nyctecheconomi url_,0,1.0,0.0,0.0
 nyc economi made numnum2m worker includ self-employ nyctecheconomi url_ url_,0,1.0,0.0,0.0
 citi receiv num4 commun reinvest award texa colleg save program w/ mention_ url_,0,1.0,0.0,0.0
-num tip success manag remot project url_ via mention_,1,0.0,1.0,0.0
 pathway progress citi foundat initi improv career readi num3 num3 youth url_,0,1.0,0.0,0.0
 citi foundat partner big citi mayor nonprofit connect num3k unum youth w/ career opportun url_,0,1.0,0.0,0.0
 continu grow profession support network four distinct type busi mentor url_ mention_,0,0.6496,0.17520000000000002,0.17520000000000002
@@ -390,7 +375,6 @@ success tip take deep breath focu right opportun not let goal lead blindli url_ 
 fact global num3 mm ppl illiter help mention_ improv literaci develop countri url_ eforeduc,0,0.6662,0.1669,0.1669
 music good soul check out citiua uk workplac choir mention_ prepar thechoir url_,1,0.16685,0.6663,0.16685
 num way dress impress w/out break bank uo advic via citiua work wardrob style workshop url_ mention_,1,0.0,1.0,0.0
-china citi support craftwork develop program guizhou- increas rural artisan household biz num2-num2 url_ apac,0,1.0,0.0,0.0
 commun impact crime see mention_ reduc crime w/ fish farm url_ ftcitiaward progressmak,1,0.0,1.0,0.0
 advic make content market work busi url_ via mention_,0,0.6747,0.16265000000000002,0.16265000000000002
 app fix citi see mention_ enabl ppl address problem commun url_ ftcitiaward,1,0.0,1.0,0.0
@@ -401,9 +385,7 @@ nyc tech ecosystem employ num3 num3 peopl num nyc workforc nyctecheconomi url_,0
 work tech nyc new report citi mention_ mention_ mention_ mention_ explor nyctecheconomi url_,0,0.6455,0.17725000000000002,0.17725000000000002
 citi sponsor philippin travel tour expo citi cc holder reward w/ perk exclus payment plan travel url_,0,1.0,0.0,0.0
 avoid burn out work num way tell time take person day url_ mention_,1,0.16125,0.6775,0.16125
-best advic put togeth employe recognit program hint work w/ team num defin reward num tip url_ mention_,1,0.0,1.0,0.0
 uniqu role govern play foster innov entrepreneurship progressmak,0,1.0,0.0,0.0
-latest investor relat news right e-mail inbox sign citi news alert url_,1,0.0,1.0,0.0
 teamwork tough mention_ femal athlet year share take succeed url_ progressmak,0,0.6662,0.1669,0.1669
 citi mention_ fund num2 local leader transform commun hereua url_ communityqb,1,0.17009999999999997,0.6598,0.17009999999999997
 meet partner progress see call uicommun quarterbacksuaeurl_,1,0.16125,0.6775,0.16125
@@ -415,7 +397,6 @@ citi proud name civicnum2 2nd straight year recogn among community-mind unum com
 ivd thank num2 num3+ citivolunt gave num3 num3+ hr local commun june uanum2 tbt url_,0,0.6639,0.16804999999999998,0.16804999999999998
 citi md lesley lynn featur timewis power part time list senior flexibl worker mention_ modernwork url_,0,1.0,0.0,0.0
 citi proud work mention_ provid mentor career develop coach us veteran url_,1,0.16265000000000002,0.6747,0.16265000000000002
-favorit ftcitiaward finalist tune award gala dec num2th learn winner url_,1,0.0,1.0,0.0
 uiciti need strong sustain effici place bizu talk l.a. 's green public bldg effort url_,0,1.0,0.0,0.0
 honor mr. mandelaua life citi foundat contribut usd num3 num3 mandela childrenua hospit,0,1.0,0.0,0.0
 citi ceo corbat need leadership workforc divers broad view cultur client around world ootsni,0,1.0,0.0,0.0
@@ -435,7 +416,6 @@ hard way often right way lesson u.s. olympian mention_ learn start career url_ e
 fashionforward ftcitiaward finalist mention_ use runway help youth creativ channel energi url_ style,0,1.0,0.0,0.0
 citi healthcar leader w/ help mainfram move patient payment digit age url_ progressmak,0,1.0,0.0,0.0
 citi continu deliv better social servic less resourc read url_ uscmwinternum2 citiforc,1,0.0,1.0,0.0
-moment away learn name ftcitiaward winner stay tune congratul url_,1,0.0,1.0,0.0
 big moment arriv ftcitiaward winner announc tonight 9pm est learn url_ progressmak,1,0.0,1.0,0.0
 innov mind come togeth ed glaeser prof. ec mention_ deliv ftcitiaward gala keynot tomorrow url_,0,1.0,0.0,0.0
 citi foundat proud support women micro-entrepreneur dominican republ url_,0,1.0,0.0,0.0
@@ -444,11 +424,9 @@ letua not forget nationua veteran help children pursu higher ed w/ mention_ efor
 popular guest ftcitiaward last night digit touchscreen see display url_ url_,1,0.0,1.0,0.0
 citi milken institut develop innov lab promot financialinclus israel url_,0,1.0,0.0,0.0
 thank ftcitiaward finalist partner guest support advanc celebr innov url_,2,0.16110000000000002,0.16110000000000002,0.6778
-congratul num4 ftcitiaward global winner mention_ rt congratul url_,2,0.0,0.0,1.0
 mention_ mention_ foundat announc partnership support youth employ north africa url_ allaboutjob,0,1.0,0.0,0.0
 num2 tip network like pro url_ via mention_ career,1,0.1693,0.6614,0.1693
 startup tip uia product work ethic start w/ healthier lifestyleu uo num tip live healthi url_ mention_,1,0.0,1.0,0.0
-balanc entrepreneurship fatherhood tip make parenthood startup life work togeth url_ mention_,1,0.16615000000000002,0.6677,0.16615000000000002
 eforeduc support mention_ mission enrich live risk youth mexico around world url_,0,1.0,0.0,0.0
 citi australia proud sponsor num4 sydney new yearua eve learn url_ nye sydny,1,0.0,1.0,0.0
 like sing work tonight watch us compet place final thechoir mention_ 9pm url_,1,0.0,1.0,0.0
@@ -465,7 +443,6 @@ confid foster success teachabl tip cultiv confid secur success url_ mention_ pro
 congratul mention_ workplac choir year magnific perform deserv champion thechoir,2,0.0,0.0,1.0
 good luck choir particip final sing work mention_ mention_ cours mention_ thechoir,2,0.15965000000000001,0.15965000000000001,0.6807
 num4 num num human num bn ppl live citiesnuma mention_ +citi talk urban innov url_ progressmak,0,1.0,0.0,0.0
-congratul mention_ workplac choir year magnific perform deserv champion thechoir,2,0.0,0.0,1.0
 congratul num4 sing work particip mention_ mention_ mention_ mention_ mention_ thechoir,0,0.6675,0.16625,0.16625
 startup tip num2 way instantli boost social media credibl url_ via mention_,0,0.6715,0.16425,0.16425
 makingadiffer new fairway park apt wash dc meet increas demand afford hous url_ citiforc,0,1.0,0.0,0.0
@@ -504,38 +481,30 @@ mention_ glad could give back citivolunt,2,0.0,0.0,1.0
 mt mention_ shout out citivolunt fantast saturday revit astoria park url_,2,0.16685,0.16685,0.6663
 mt mention_ mention_ mention_ thank volunt citivolunt,2,0.16265000000000002,0.16265000000000002,0.6747
 mt mention_ rt mention_ thank mention_ volunt mention_ today citivolunt,2,0.0,0.0,1.0
-mention_ thank hard work citivolunt,2,0.0,0.0,1.0
 terrif photo rt mention_ mention_ citivolunt tucuman argentina gcd url_,2,0.16125,0.16125,0.6775
 mention_ fantast photo citivolunt,2,0.0,0.0,1.0
 mention_ thank servic citivolunt,2,0.0,0.0,1.0
 thank mt mention_ citivolunt give back second harvest food bank jacksonvil global commun day,2,0.0,0.0,1.0
 mt mention_ citivolunt share typhoon haiyan survivor leyt mention_ mention_ url_,0,1.0,0.0,0.0
-great photo rt mention_ citivolunt elsalvador || escuela de la sabana || mention_ mention_ url_,2,0.16344999999999998,0.16344999999999998,0.6731
 thank give back mt mention_ proud see mention_ colleagu across globe contribut gcd citivolunt,2,0.1669,0.1669,0.6662
 great photo rt mention_ citivolunt guatemala ... compartiendo con lo niio en el irtra petapa url_,2,0.16254999999999997,0.16254999999999997,0.6749
 great photo rt mention_ citivolunt voluntariadobanamex mention_ cabosanluca casahogar loscabo url_,2,0.0,0.0,1.0
-rt mention_ mention_ great follow citivolunt contribut around world global commun day,2,0.0,0.0,1.0
-look like fun rt mention_ citibank citivolunt communityday citibankthailand thailand coral plantingu_ url_,2,0.1614,0.1614,0.6772
 well done rt mention_ aksi pembuatan lubang serapan biopori citivolunt mention_ mention_ url_,2,0.16265000000000002,0.16265000000000002,0.6747
 great work team rt mention_ citivolunt bangkok freedomfish ngampol_p dadath aa,2,0.0,0.0,1.0
 well done team rt mention_ mention_ citivolunt url_,2,0.0,0.0,1.0
 mention_ thank give back citivolunt,2,0.0,0.0,1.0
 mention_ thank part global commun day citivolunt,2,0.0,0.0,1.0
-fantast result thank team rt mention_ citivolunt peru great work great team great gcd lima peru url_,2,0.0,0.0,1.0
-thank rt mention_ mention_ num3+ costa rica citivolunt celebr global commun day parqu la libertad url_,2,0.0,0.0,1.0
 thank team rt mention_ citivolunt voluntariadobanamex banamex cabosanluca casahogar loscabo url_,2,0.0,0.0,1.0
 mention_ big thank team give back global commun day citivolunt,0,0.6573,0.17135,0.17135
 mention_ thank share give back citivolunt,2,0.0,0.0,1.0
 team thx elsalvador rt mention_ citivolunt elsalvador citibank citibanksv cobro cepanama url_,2,0.0,0.0,1.0
 celebr global commun day num num3 citivolunt singapor particip chariti carniv url_,0,1.0,0.0,0.0
 great photo rt mention_ citivolunt cali colombia url_,2,0.0,0.0,1.0
-great photo rt mention_ aksi pembuatan lubang serapan biopori citibank bandung citivolunt mention_ url_,2,0.16185,0.16185,0.6763
 japan num num3 citivolunt particip activ across countri includ park beach clean up,0,1.0,0.0,0.0
 great photo rt mention_ mention_ citivolunt diaglobaldelacomunidad elsalvador url_,2,0.0,0.0,1.0
 global commun day num num3 citivolunt taiwan give back spend time w/ orphan underprivileg children,0,1.0,0.0,0.0
 num3 citivolunt vietnam plant tree help protect coastlin spread awar environment protect,0,1.0,0.0,0.0
 global commun day activ philippin includ assist commun recent impact typhoon yolanda url_,0,1.0,0.0,0.0
-great photo rt mention_ citivolunt mention_ cali colombia url_,2,0.0,0.0,1.0
 great photo rt mention_ citivolunt citi friend bogota colombia url_,2,0.0,0.0,1.0
 cameroon num2 citivolunt celebr global commun day serv local hospit refurbish pediatr ward,0,1.0,0.0,0.0
 nice work today rt mention_ librari build harlem citivolunt educ url_,2,0.17135,0.17135,0.6573
@@ -557,8 +526,6 @@ great job team rt mention_ out forc plant tree citivolunt url_,2,0.0,0.0,1.0
 num4 citivolunt brazil help repaint public school classroom url_,0,1.0,0.0,0.0
 mention_ great work,2,0.0,0.0,1.0
 india celebr global commun day num num3 citivolunt work revit learn space clean beach park,0,1.0,0.0,0.0
-mention_ great work,2,0.0,0.0,1.0
-rt mention_ thank mention_ volunt mention_ today citivolunt,0,0.6614,0.1693,0.1693
 global commun day num num3 citivolunt hongkong particip num2 servic event includ chariti footbal tournament,0,1.0,0.0,0.0
 nice photo thank give back rt mention_ mention_ citivolunt wagonroadcamp url_,2,0.0,0.0,1.0
 great teamwork rt mention_ gcd ... ..teamwork citi ladi citivolunt abuja mention_ url_,2,0.0,0.0,1.0
@@ -576,10 +543,8 @@ citivolunt citibankmalaysia citimi kualalumpur url_,0,1.0,0.0,0.0
 rt mention_ citivolunt mention_ tower hamlet london today help renov offic url_,0,1.0,0.0,0.0
 great pic rt mention_ mention_ citivolunt milan work yellow wall shine day url_,2,0.16165000000000002,0.16165000000000002,0.6767
 keep good work rt mention_ citivolunt work sweat mile end park london url_,2,0.0,0.0,1.0
-agre rt mention_ citivolunt today sens satisfact belief citi sure make differ,2,0.16265000000000002,0.16265000000000002,0.6747
 great job guy rt mention_ citivolunt finish chennai marina beach url_,2,0.0,0.0,1.0
 rt mention_ citivolunt bit global commun day great day anand niketan ngo mumbai url_,0,1.0,0.0,0.0
-nice pic rt mention_ recon asset op girl w/ sir caloy citivolunt citiph gcd monopod hahaha url_,2,0.16660000000000003,0.16660000000000003,0.6668
 tip speak meet becom influenti work url_ career profwomen mention_,0,0.6715,0.16425,0.16425
 great photo tx give back rt mention_ glad part citivolunt today url_,2,0.0,0.0,1.0
 fun out rt mention_ citi global commun day citivolunt tampa url_,2,0.16344999999999998,0.16344999999999998,0.6731
@@ -588,7 +553,6 @@ look like fun rt mention_ citi franc global commun day harder actual look citivo
 great photo rt mention_ citivolunt url_,2,0.0,0.0,1.0
 tx num give back la rt mention_ look forward great day citivolunt allianc colleg readi school lo angel,2,0.16125,0.16125,0.6775
 thank hard work rt mention_ citivolunt work sweat mile end park london url_,2,0.17135,0.17135,0.6573
-congrat argentina rt mention_ mention_ citivolunt num3year diadelacomunidad url_,2,0.0,0.0,1.0
 thank servic rt mention_ way go citivolunt make proud part mention_ famili,2,0.0,0.0,1.0
 citivolunt deb connor rebuild home typhoon survivor philippin read stori url_,1,0.0,1.0,0.0
 citi proudli support re-launch expans respons landlord engag initi san jose url_ mention_,0,1.0,0.0,0.0
@@ -599,13 +563,10 @@ rt support citivolunt num2 countri give back global commun day url_ url_,1,0.0,1
 great photo thank give back rt mention_ citivolunt url_,2,0.0,0.0,1.0
 great photo rt mention_ citivolunt venezuela url_,2,0.0,0.0,1.0
 thank rt mention_ wish citivolunt great global global commun day mention_ volunteer expandopportun,2,0.16185,0.16185,0.6763
-thank rt mention_ +num4 citivolunt gather mention_ elsalvador readi revit num school along countri,2,0.0,0.0,1.0
-great day volunt rt mention_ citivolunt hard work beauti day url_,2,0.16845,0.16845,0.6631
 thank effort rt mention_ citivolunt haiti url_,2,0.0,0.0,1.0
 great photo-thank give back rt mention_ global commun day num4 amaz day citivolunt url_,2,0.0,0.0,1.0
 citi foundat invest num2 million num4 support financi inclus econom progress num2 countri url_,0,1.0,0.0,0.0
 citi proud sponsor mention_ num4 wall street run heart walk heartwalknyc url_,0,1.0,0.0,0.0
-great work rt mention_ citivolunt paint soil born farm url_,2,0.16185,0.16185,0.6763
 thank make differ rt mention_ awesom experi citi global commun day citivolunt mumbai thank mention_,2,0.0,0.0,1.0
 great news rt mention_ mention_ commend best employ father uk mention_ tewf url_,2,0.0,0.0,1.0
 thank runner walker citivolunt made heartwalknyc num4 success mention_,2,0.0,0.0,1.0
@@ -613,7 +574,6 @@ num4 citi employe particip todayua wall street run heart walk mention_ citivolun
 citivolunt la build hub engag health physic activ citi garden project url_,0,1.0,0.0,0.0
 mt mention_ mention_ announc businesssourc virtual counselor network w/ mention_ lo angel biz owner url_,0,1.0,0.0,0.0
 invest educ next gener key drive econom prosper gener job url_ citiforc,0,1.0,0.0,0.0
-look like fun rt mention_ globalcommunityday citivolunt url_,2,0.16344999999999998,0.16344999999999998,0.6731
 great photo rt mention_ citivolunt global commun day en colombia url_,2,0.0,0.0,1.0
 volunt enabl progress citi around world see impact num2k+ citivolunt url_ url_,1,0.16610000000000003,0.6678,0.16610000000000003
 network advic busi owner uo num2 ceo share doua donuat url_ mention_ entrepreneur,0,0.6656,0.16720000000000002,0.16720000000000002
@@ -621,9 +581,7 @@ teen learn financi mkt citi fx head anil prasad guid student london class mentio
 citicma name citizensnum4 best econom empower program uo help num num3 microentrepreneur num2 countri url_,0,1.0,0.0,0.0
 south africa winner citicma announc uo share stori allevi poverti boost busi url_,0,1.0,0.0,0.0
 grate 2x honor mention_ citizen awardsuo work empow student commun around world url_,0,1.0,0.0,0.0
-soapopera teach busi skill see aprenda url_ ftcitiaward progressmak,1,0.0,1.0,0.0
 emerg market lose approx num2 bil annual fail num educ girlsnummention_ eforeduc partner num help url_,0,1.0,0.0,0.0
-true thing busi valuabl great network tip build strongest url_ mention_,1,0.16775,0.6645,0.16775
 citi proud 1st bank hondura leed certif url_ citisustain getgreen,0,1.0,0.0,0.0
 didyouknow citi choir weuar proud mention_ thechoir sing work uo seri air 2nite 9pm url_,0,0.6573,0.17135,0.17135
 analyt social media num2 ceo share must-hav market tool smallbusi product launch url_ mention_,0,1.0,0.0,0.0
@@ -635,7 +593,6 @@ advic mentor self-express matter let belief passion shine work url_ mention_,1,0
 citi 1st compani haiti obtain leed certif url_ citisustain getgreen,0,1.0,0.0,0.0
 startup life turn zombi num tip get healthi url_ mention_,1,0.0,1.0,0.0
 citi fund social invest research w/mention_ mention_ mention_ mention_ mention_ url_,0,1.0,0.0,0.0
-citi ipb receiv support exclus partnership lead busi learn aeurl_ ipbemea,1,0.0,1.0,0.0
 .mention_ alum ask next mayor support dream like help charter school url_ eforeduc,0,1.0,0.0,0.0
 watch move stori mention_ assist poor w/ support help lifetim url_ ftcitiaward,0,0.6582,0.1709,0.1709
 citi given num global award innov invest bank num equiti prime brokerag risk mgt url_ sub req,0,1.0,0.0,0.0
@@ -682,7 +639,6 @@ citi ceo corbat time right pull togeth resourc knowledg connect achiev greater f
 num way find right mentor busi url_ mention_,0,0.6663,0.16685,0.16685
 malaysia mention_ bring home num custom servic award uo citiphon bank win num categori url_,0,1.0,0.0,0.0
 extend educ opportun less fortun via electron trade jeff feig gnum2 fx eforeduc url_,0,1.0,0.0,0.0
-use crowdsourc mention_ rejuven one danish capit 's neighborhood url_ ftcitiaward,1,0.0,1.0,0.0
 use bike help healthcar namibia 's bicycl empower network answer url_ ftcitiaward,1,0.17154999999999998,0.6569,0.17154999999999998
 ~1m us student pubnumchart school wait list mention_ strip barrier w/ eforeduc url_ progressmak,0,1.0,0.0,0.0
 citi launch award-win electron bank platform institut client singapore-enhanc analyt url_,0,1.0,0.0,0.0
@@ -705,7 +661,6 @@ num2 damn piec evid jpmorgan whale trade investig url_ citigroup brk,0,0.6662,0.
 aruba network fall adjust profit num hot stock watch url_ citigroup brk,0,0.6675,0.16625,0.16625
 exclus warburg 's antero resourc plan ipo sourc antero resourc oil natur ... url_ citigroup brk,0,1.0,0.0,0.0
 mbia bofa reach accord disput num heavili trade stock follow url_ citigroup brk,0,1.0,0.0,0.0
-hacker threaten take bank govern offlin tuesday url_ citigroup brk,0,1.0,0.0,0.0
 cash dividend way citigroup capit ix numnum2 capit secur url_ citigroup brk,0,1.0,0.0,0.0
 citi gain new accolad secur servic latin america privat equiti admin ... url_ citigroup brk,0,1.0,0.0,0.0
 greec 's alpha bank trade ex-right may num2 url_ citigroup brk,0,1.0,0.0,0.0
@@ -779,13 +734,10 @@ bank rethink branch work url_ citigroup brk,0,1.0,0.0,0.0
 citia payment analyt win celent model bank award product develop busi wire ... url_ citigroup brk,0,1.0,0.0,0.0
 right way think citigroup citi still leviathan turn corn ... url_ citigroup brk,0,1.0,0.0,0.0
 right way think citigroup url_ citigroup brk,0,1.0,0.0,0.0
-judg weigh fair citigroup 's num3 mln investor pact rob insight globe mail ... url_ citigroup brk,0,1.0,0.0,0.0
-judg weigh fair citigroup 's num3 million investor pact url_ citigroup brk,0,1.0,0.0,0.0
 judg weigh fair citigroup 's num3 million investor pact new york reuter federa ... url_ citigroup brk,0,1.0,0.0,0.0
 citigroup given equal weight rate evercor partner 's stock equal weight ra ... url_ citigroup brk,0,1.0,0.0,0.0
 rbc lure wall street debt trader volum u.s. doubl url_ citigroup brk,0,1.0,0.0,0.0
 bank say stricter securit rule may hurt lend bank lobbi against internati ... url_ citigroup brk,0,1.0,0.0,0.0
-analyst upgrad jpmorgan say stock work weather url_ citigroup brk,0,1.0,0.0,0.0
 fight save commun bank georgia commun bank close door ... url_ citigroup brk,0,1.0,0.0,0.0
 video fast money final trade url_ citigroup brk,1,0.16625,0.6675,0.16625
 mortgag lender charg defraud govern reuter unit state thursday ... url_ citigroup brk,0,1.0,0.0,0.0
@@ -942,7 +894,6 @@ eme sand mumford son lead winner brit award url_ citigroup brk,0,1.0,0.0,0.0
 limit mortgag financ role u.s. govern gain support url_ citigroup brk,0,1.0,0.0,0.0
 whole food citigroup ceo set talk campu two sometimes-controversi busi giant ... url_ citigroup brk,0,1.0,0.0,0.0
 dubai util dewa eye num bln sukuk repay debt fund project url_ citigroup brk,0,1.0,0.0,0.0
-failsaf failur aforeclosur review system fail compens mistreat borrow ... url_ citigroup brk,0,1.0,0.0,0.0
 gilt group 's kevin ryan work not work flash sale onlin retail pione ... url_ citigroup brk,0,1.0,0.0,0.0
 us invest bank embrac riskier block trade url_ citigroup brk,0,1.0,0.0,0.0
 us invest bank embrac riskier block trade url_ citigroup brk,0,1.0,0.0,0.0
@@ -974,7 +925,6 @@ citi announc aetna charter healthcar benefit compani comprehens digit health pay
 new citi foundat expand membership network financi sector url_,0,1.0,0.0,0.0
 financi time citi announc global call submiss num4 ft/citi ingenu award url_,0,1.0,0.0,0.0
 citigroup success complet sale numnum2 interest shanghai pudong develop bank url_,0,1.0,0.0,0.0
-citi team usa flag tour stop jacksonvil celebr sponsorship num4 unum olymp paralymp team url_,0,1.0,0.0,0.0
 citi financi time launch global ingenu award recogn emerg leader transform citi ... url_,0,1.0,0.0,0.0
 citi win global bank innov award bai finacl url_,0,1.0,0.0,0.0
 citi team usa flag tour stop tucson celebr sponsorship num4 unum olymp paralymp team url_,0,1.0,0.0,0.0
@@ -1095,7 +1045,6 @@ rt mention_ ukrain give voic beneficiari ethnograph studi url_ sustain,0,1.0,0.0
 posit approach food one convict one principl one golden rule one tool danon danonenum2 url_,0,0.6573,0.17135,0.17135
 danuacar program provid minimum healthcar coverag danoneua num3 num3 employe num4 url_ danonenum2 grow,0,1.0,0.0,0.0
 danon water reach goal rais awar water benefit franc num2 visitor found anim instruct,0,1.0,0.0,0.0
-danon water tour seasid town franc 3rd yr summer 1st time brazil spain promot healthi hydrat,0,1.0,0.0,0.0
 among children num common food allergi cow 's milk num children thought sever affect medicalnutrit,0,1.0,0.0,0.0
 latam would invest num total gdp num4-num4 catch infrastructur level uiasian tigersu,0,1.0,0.0,0.0
 rt mention_ sao paulo account num2 brazil 's popul num2 countri 's gdp ftcitiaward newmarket,0,1.0,0.0,0.0
@@ -1104,7 +1053,6 @@ facebook campaign convert num3 num3 mous click num3 num3 kilo food spanish feder
 blog daniel nina carasso foundat commit sustain food long-term health url_,0,1.0,0.0,0.0
 neocat partner british allergi foundat launch site parent children cow 's milk allergi url_,0,1.0,0.0,0.0
 first time ever danon sale reach aa5 billion quarter danoneh1 q2 financ,0,1.0,0.0,0.0
-danon research centr special nutrit 1st asia pacif focu fulli child matern health url_,0,1.0,0.0,0.0
 dual dynam danoneh1 num2 sale neg vs. rest world num2 sale grow doubl digit financ danon,0,1.0,0.0,0.0
 danon first half num4 highlight sale num driven emerg market free cash flow aanum3 million danoneh1 financ,0,1.0,0.0,0.0
 blog rt mention_ today earth exclus weather forecast septemb num4 url_ u_,0,1.0,0.0,0.0
@@ -1112,15 +1060,12 @@ mother china trust onlin commun friend regard product recommend children sourc e
 us danon market share fast-grow greek yogurt segment benefit new product capac danonesal,0,1.0,0.0,0.0
 danon canada invest num2mln bouchervil plant produc mention_ greekyogurt url_,0,1.0,0.0,0.0
 live longer not mean live longer healthi life averag peopl live num year ill health injuri sourc mention_,0,1.0,0.0,0.0
-latest newslett danon ecosystem fund out focu microdistribut project url_ social_innov,0,0.6675,0.16625,0.16625
 mexico danon semilla project plan creat num num3 job microdistribut num4 social_innov url_,0,1.0,0.0,0.0
 indonesia large-scal food retail account num groceri sale num4 url_ danonenum2 datawal,0,1.0,0.0,0.0
 long term sustain perform danon 's prioriti continu invest growth geographies/categori danoneh1 financ,0,1.0,0.0,0.0
 creat healthi product promot healthi lifestyl indonesia url_,0,1.0,0.0,0.0
-mention_ mention_ mention_ thank lot ff back,2,0.0,0.0,1.0
 engag co-construct dynam commun time differ need patienc say enumfab globalcnum4,0,1.0,0.0,0.0
 danone-unimilk open new line product babi food kuban russia url_,0,1.0,0.0,0.0
-danon strateg partner mention_ year 's edit co-construct globalcnum4,0,1.0,0.0,0.0
 letua join mention_ converg palai brongniart sept num2th support socialbusi mention_,1,0.0,1.0,0.0
 rt mention_ num4 num2 percent manufactur good could sold develop economi url_,0,1.0,0.0,0.0
 discov danon investor relat first ipad applic design investor commun url_,0,0.6582,0.1709,0.1709
@@ -1148,7 +1093,6 @@ danone-back project provid water cost cambodia url_ mention_ mention_,0,1.0,0.0,
 blogpost danon speak highli danuacar url_ health,0,1.0,0.0,0.0
 yo-jelli danon new brand south africa fun tast sensat jelli health benefit yoghurt danon yojelli,0,1.0,0.0,0.0
 sarihusada win num gkpm award num4 appreci given coordin ministri social welfar cfcd danon indonesia,0,1.0,0.0,0.0
-danon 's stori one social innov co-creat said e. faber danoneua coo gsbsnum4 mention_,0,1.0,0.0,0.0
 danon institut reward el centro catalian de nutricii_n food initi url_,0,1.0,0.0,0.0
 today health ministri reward danon spain work social school women empower url_ endvaw,0,1.0,0.0,0.0
 danon spain manag creat num3 job opportun social school women empower project endvaw,0,1.0,0.0,0.0
@@ -1231,20 +1175,13 @@ mention_ proud show make ship product throughout world thank great visit,2,0.0,0
 flea tick pose health risk human anim learn protect pet url_,1,0.0,1.0,0.0
 collect effort need expand access health brenda colatrella corpor respons follow chat gpah,1,0.16775,0.6645,0.16775
 call action expand access qualiti healthcar url_ join webinar learn url_,1,0.0,1.0,0.0
-mention_ mention_ mention_ mention_ great work,2,0.0,0.0,1.0
-congrat year 's uncfmrk award recipi check out photo url_,2,0.17514999999999997,0.17514999999999997,0.6497
-wish everyon us happi healthi independ day bewel,2,0.16285,0.16285,0.6743
 'thi program mean someon believ work believ -samuel j. laurencin num4 graduat fellow uncfmrk,0,1.0,0.0,0.0
 'thi award symbol futur -jarvi johnson num4 undergradu fellow uncfmrk,0,0.66,0.16999999999999998,0.16999999999999998
 merck support program amaz exampl corpor respons -graduat fellow program uncfmrk,0,1.0,0.0,0.0
 mrt mention_ uncf-merck scienc initi umsi -a partnership uncf global health url_ uncfmrk,0,1.0,0.0,0.0
 kudo num2 student award uncfumerck scienc initi scholarship fellowship uncf mrk,0,0.6569,0.17154999999999998,0.17154999999999998
-check out bewel health tip url_,1,0.0,1.0,0.0
 asthma caus kid miss num2m+ school day year letua work togeth reduc number,1,0.0,1.0,0.0
-mention_ hi app seem work check out url_,1,0.1683,0.6634,0.1683
 merck hero new featur spotlight employe volunt check out url_,1,0.0,1.0,0.0
-mention_ cool pic thank share,2,0.0,0.0,1.0
-mention_ mention_ mention_ mention_ mention_ mention_ mention_ mention_ thank,2,0.16165000000000002,0.16165000000000002,0.6767
 big data becom increasingli import cost-restrict healthcar environmentnumu uom roseblatt dianum4,0,1.0,0.0,0.0
 septemb nation cholesterol educ month merckengag find tool help manag cholesterol url_,1,0.0,1.0,0.0
 mention_ mention_ mention_ thank proud partner,2,0.0,0.0,1.0
@@ -1265,21 +1202,17 @@ num2th year merck name work mother magazineua num3 best compani list learn url_,
 proud partner mention_ mention_ support digit health medtech startup learn url_,1,0.0,1.0,0.0
 mention_ mention_ mention_ mention_ good stuff,2,0.0,0.0,1.0
 merck invest new global health invest fund highlight week unga learn url_,1,0.0,1.0,0.0
-unga today mention_ releas guid principl access healthcar learn url_,1,0.0,1.0,0.0
 commit hiv commun includ partnership mention_ mention_ projectidesign hear latest iasnum4,1,0.16615000000000002,0.6677,0.16615000000000002
 strong bone critic health discuss import healthi bone w/ doctor url_ bewel,1,0.16870000000000002,0.6626,0.16870000000000002
 thank dr. hilleman url_ mention_,2,0.0,0.0,1.0
 tomorrow world rabi day sponsor mention_ see merck commit battl against rabi url_,1,0.0,1.0,0.0
 present bank america/merril lynch num4 healthcar confer tomorrow num num2am pdt pleas join url_,1,0.0,1.0,0.0
-physic activ import everyon much need depend age learn url_,1,0.0,1.0,0.0
 merckengageua new guid health insur help better understand option learn url_,1,0.0,1.0,0.0
 merck hero new featur spotlight employe volunt check out url_,1,0.0,1.0,0.0
-proud call partner mention_ mention_ mention_ mention_ mention_ merckformoth url_,2,0.16265000000000002,0.16265000000000002,0.6747
 today dedic new merck anim health headquart locat summit nj url_,0,1.0,0.0,0.0
 griffin hospit implement vree health 's transitionadvantagea help patient transit hospit home url_,0,1.0,0.0,0.0
 rtc fellowship world health employe help address health need underserv learn url_,1,0.16765000000000002,0.6647,0.16765000000000002
 mention_ mention_ mention_ mention_ proud partner,2,0.0,0.0,1.0
-proud part mention_ launch a3 project improv medic adher learn url_,1,0.0,1.0,0.0
 interest new maternalhealth technolog not miss mention_ num/num2 panel w/ mention_ url_,1,0.0,1.0,0.0
 mention_ u merck scienc initi annual award scholarships/fellowship top scienc scholar appli num4 url_,1,0.16344999999999998,0.6731,0.16344999999999998
 garden may help reduc stress great way enjoy outdoor done safe check out tip url_,1,0.0,1.0,0.0
@@ -1304,7 +1237,6 @@ merck hero new featur spotlight employe volunt check out url_,1,0.0,1.0,0.0
 merckua partner mention_ host webinar address health care workforc watch today num2pm et url_,1,0.0,1.0,0.0
 see face peopl touch merckformoth matern health program u. url_,1,0.0,1.0,0.0
 ceo talk merckformoth help make sure no woman die give life url_ via mention_,0,1.0,0.0,0.0
-merckformoth launch u.s. program lead matern health organ learn url_,1,0.0,1.0,0.0
 scientist found sever risk factor could make person like develop melanoma learn url_,1,0.0,1.0,0.0
 practic sun safeti year round outdoor learn way prevent melanoma url_,1,0.0,1.0,0.0
 mention_ proud support haiyan relief work,2,0.1683,0.1683,0.6634
@@ -1319,11 +1251,9 @@ wadnum4 today visit projectidesign see mention_ special design fashion item url_
 num2th anniversari wadnum4 stand solidar hiv commun,0,1.0,0.0,0.0
 one day 'til mention_ fashion item unveil make projectidesign wadnum4 pledg url_,1,0.0,1.0,0.0
 donuat forget make pledg wadnum4 visit projectidesign pledg action today url_,1,0.0,1.0,0.0
-wish happi healthi thanksgiv bewel,2,0.0,0.0,1.0
 watch celebr mention_ cook healthi stew white bean green url_,1,0.16265000000000002,0.6747,0.16265000000000002
 check out healthi groceri shop tip celebr mention_ url_,1,0.0,1.0,0.0
 happi particip takeyourchildtoworkday check out kid particip merck today url_,1,0.0,1.0,0.0
-uiitua work uo itua passion itua personal.u frank clyburn presid merck oncolog read url_,1,0.16785,0.6643,0.16785
 itua tbt letua retro rewind num4 merck won first army-navi product award see histori url_,1,0.0,1.0,0.0
 mention_ awesom thank share,2,0.0,0.0,1.0
 today intern matern health day rt agre no woman die give life intlmhday merckformoth,1,0.0,1.0,0.0
@@ -1345,7 +1275,6 @@ uiw want focu top custom improv health outcomesnumu uo a. schechter mrkbiznum2,0
 uidrug develop team sport must play waynumu uor perlmutt merckbiznum2,0,1.0,0.0,0.0
 uimerck built reput discov develop breakthrough therapeuticsnumu uo r. perlmutt merckbiznum2,0,1.0,0.0,0.0
 uimerck right strategi drive product growthnumu uo k. frazier merckbiznum2,0,1.0,0.0,0.0
-enter worldwid collabor w/ mention_ market develop novel therapi cardiovascular disease.url_,0,1.0,0.0,0.0
 merckformoth aim improv health well-b mom everywher rt mother made differ life,1,0.0,1.0,0.0
 proud member market coalition- group aim serv empow peopl w/ disabl url_,0,1.0,0.0,0.0
 mention_ proud gold sponsor,2,0.0,0.0,1.0
@@ -1360,12 +1289,9 @@ protect child sun read tip mention_ sun safeti children url_,1,0.0,1.0,0.0
 mention_ mention_ thank proud work divers honor recogn,2,0.16265000000000002,0.16265000000000002,0.6747
 boston employe volunt serv dinner cancer patient mention_ hope lodg last week check out url_,1,0.16035,0.6793,0.16035
 memorialday picnic plan weekend check out tip mention_ food safeti outdoor eat url_,1,0.0,1.0,0.0
-mention_ kudo diabet team congrat,2,0.0,0.0,1.0
 mention_ thank proud sponsor event,2,0.0,0.0,1.0
 male unum num2 risk women unum num2 risk develop cancer lifetim oncofact,0,1.0,0.0,0.0
 uidata mention_ underscor merck advanc broad develop program includ late-stag studi num tumor typesnumu -dr. bayn,0,1.0,0.0,0.0
-mention_ thank great meet especi enjoy follow convers social media asconum2,2,0.0,0.0,1.0
-nearli num/num adult suffer insomnia learn abt common sleep disord us url_ mention_,1,0.0,1.0,0.0
 innov sustain long-term cash flow creat valu ken frazier mention_,0,1.0,0.0,0.0
 mention_ proud passion employe volunt url_,2,0.0,0.0,1.0
 diabet num num time like develop heart diseas stroke peopl without diabet,0,1.0,0.0,0.0
@@ -1373,9 +1299,7 @@ mention_ question concern pleas contact anim health technic servic num3-num3-num
 merck pleas support mention_ prevent num million heart attacks/strok check out url_,1,0.0,1.0,0.0
 hpv caus case cervicalcanc cervicalhealthmonth learn fact url_,1,0.16265000000000002,0.6747,0.16265000000000002
 want feedback approach corpor respons take survey let us know url_,1,0.0,1.0,0.0
-foundat strategi commit valu integr learn ethic complianc program url_,1,0.0,1.0,0.0
 transpar fundament pillar fda polici uo made lot progress room go uo m. rosenblatt sentinel,0,1.0,0.0,0.0
-cmo patient advoc speak today sentinel public workshop see webcast num num2 pnumm est url_,1,0.0,1.0,0.0
 donuat miss ceo jnump morgan healthcar confer today listen live audio webcast num pnumm pst url_,1,0.17154999999999998,0.6569,0.17154999999999998
 merck hero featur spotlight employe volunt check out url_,1,0.0,1.0,0.0
 ceo ken frazier present num2nd annual jnump morgan healthcar confer san francisco learn url_,1,0.0,1.0,0.0
@@ -1386,10 +1310,8 @@ healthi kid like healthi adult find good habit info adolesc school health url_,1
 wish follow happi healthi new year well,2,0.0,0.0,1.0
 merck famili wish safe happi holiday season,2,0.0,0.0,1.0
 protect environ health futur make uigreenu holiday choic season see tip url_,1,0.0,1.0,0.0
-philanthrop program abil make posit differ learn url_,1,0.0,1.0,0.0
 make simpl lifestyl chang achiev health goals.visit url_ help see linda 's stori url_,1,0.0,1.0,0.0
 donuat let holiday get off track visit merckengag tip tool stay healthi holiday season url_,1,0.0,1.0,0.0
-low health literaci challeng improv health outcom around world see merck aim help url_,1,0.0,1.0,0.0
 merck hero new featur spotlight employe volunt check out url_,1,0.0,1.0,0.0
 merck lead way lgbt equal perfect score mention_ ceinum4 learn url_,1,0.0,1.0,0.0
 merckengag brand new look visit redesign site get healthi live tip inform url_,1,0.0,1.0,0.0
@@ -1427,20 +1349,16 @@ healthi habit protect harm effect stress num2 posit habit help fight stress url_
 honor select num4 manufactur leadership award winner two project learn url_,1,0.15944999999999998,0.6811,0.15944999999999998
 march nation nutrit month visit url_ find healthi delici recip idea get start eat well,1,0.1628,0.6744,0.1628
 mention_ thank recognit proud select award,2,0.0,0.0,1.0
-mention_ mention_ mention_ mention_ thank honor proud select bestplacestowork award,2,0.16125,0.16125,0.6775
 happyday alway rememb healthi happi check out bewel health tip url_,1,0.0,1.0,0.0
-mention_ right take care health celebr day,2,0.0,0.0,1.0
 intern day happi 2day check out num2 key happier live includ way stay healthi url_ bewel,1,0.0,1.0,0.0
 mention_ not wait,2,0.0,0.0,1.0
 happi worldwaterday commit improv access clean water thank mention_ url_,2,0.0,0.0,1.0
 mention_ proud partner,2,0.0,0.0,1.0
 honor win num4 ml award frost sullivan use bigdata analyt improv manufactur,0,0.6496,0.17520000000000002,0.17520000000000002
-mention_ thank shout-out proud sponsor,2,0.0,0.0,1.0
 everi num min woman die problem relat pregnancy/childbirth prevent learn url_,1,0.0,1.0,0.0
 india highest rate matern mortal world uo often prevent learn merckformoth effort url_,1,0.16804999999999998,0.6639,0.16804999999999998
 mention_,2,0.0,0.0,1.0
 proud receiv mention_ num4 partner year sustain excel award honor mention_ 9th yr url_,0,1.0,0.0,0.0
-join merckformoth commun fb url_,1,0.0,1.0,0.0
 monday 's riddl nestli first solubl cocoa beverag nesquik develop take guess url_,1,0.0,1.0,0.0
 food fact iron import blood format oxygen transport blood url_,0,1.0,0.0,0.0
 innov engin christian help develop find hint url_ special b nescafi dolc gusto piccolo,1,0.0,1.0,0.0
@@ -1452,7 +1370,6 @@ continu invest r enhanc technolog product develop url_ nestl num4 url_,0,1.0,0.0
 ceo paul bulck highlight global water scarciti cityfoodlectur cflnum4 url_ nestl,0,1.0,0.0,0.0
 mention_ nestli believ access water human right pleas visit chairmanua water blog url_,1,0.0,1.0,0.0
 mention_ nestli believ access water human right pleas visit chairmanua water blog url_,1,0.1694,0.6612,0.1694
-mention_ nestli believ access water human right pleas visit chairmanua water blog url_,1,0.0,1.0,0.0
 mention_ nestli believ access water human right pleas visit chairmanua water blog url_,1,0.0,1.0,0.0
 nestl num4 full-year result paul bulck ceo uiall busi develop emerg market contributednumu,0,1.0,0.0,0.0
 nestl 's ann roulin write build sustain product develop process url_,0,1.0,0.0,0.0
@@ -1506,10 +1423,8 @@ mention_ updat reconfirm nestl nan hnuma num gold infant formula safe url_ detai
 mention_ nestl nan hnuma num gold infant formula safe read statement url_,1,0.1693,0.6614,0.1693
 mention_ nestl nan hnuma num gold infant formula safe url_ detail,1,0.0,1.0,0.0
 mention_ hi nestl nan hnuma num gold infant formula safe pleas read url_ detail,1,0.0,1.0,0.0
-mention_ want know nestl nan hnuma num gold infant formula safe read url_,1,0.0,1.0,0.0
 mention_ nestl nan hnuma num gold infant formula safe find out url_,1,0.0,1.0,0.0
 mention_ test reconfirm data factori nestl nan hnuma num gold safe url_,2,0.0,0.0,1.0
-mention_ nestl nan hnuma num gold infant formula safe url_ detail,1,0.0,1.0,0.0
 mention_ latest statement url_ test confirm nestl nan hnuma num gold safe,0,0.6504,0.1748,0.1748
 mention_ test reconfirm data factori nestl nan hnuma num gold safe url_,0,0.6675,0.16625,0.16625
 mention_ nestl nan hnuma num gold infant formula safe read statement url_,1,0.16785,0.6643,0.16785
@@ -1530,7 +1445,6 @@ mention_ nestl nan hnuma num gold infant formula safe read url_,1,0.1683,0.6634,
 mention_ robyn test complet reconfirm nestl nan hnuma num gold safe url_,0,0.6614,0.1693,0.1693
 mention_ nestl nan hnuma num gold infant formula safe read latest statement url_,1,0.0,1.0,0.0
 mention_ infant formula nestl nan hnuma num gold safe read url_,1,0.0,1.0,0.0
-mention_ nestl nan hnuma num gold infant formula safe read url_,1,0.1693,0.6614,0.1693
 mention_ nestl nan hnuma num gold infant formula safe read url_,1,0.17700000000000005,0.6459999999999999,0.17700000000000005
 mention_ nestl nan hnuma num gold infant formula safe read url_,1,0.16785,0.6643,0.16785
 mention_ nestl nan hnuma num gold infant formula safe read latest inform url_,1,0.16999999999999998,0.66,0.16999999999999998
@@ -1603,7 +1517,6 @@ nestli invest chf num3m creat num3 new job egypt url_,0,1.0,0.0,0.0
 sri lanka 's first ladi back nestli healthi kid programm url_,0,1.0,0.0,0.0
 jenni craig announc new metabol max program measur calori monitor physic activ url_,0,1.0,0.0,0.0
 nestli purina goe one beyond num million chariti giveaway url_,0,1.0,0.0,0.0
-mention_ pleas tweet forward right person pleas allow holiday delay,2,0.0,0.0,1.0
 nestli chief look scienc make healthier profit paywal url_,0,1.0,0.0,0.0
 nestli invest anoth usd num3 million indonesia url_,0,1.0,0.0,0.0
 nestli healthi kid programm extend china url_,0,1.0,0.0,0.0
@@ -1623,7 +1536,6 @@ mention_ voluntarili recal limit amount nesquik chocol powder sold us info url_,
 mention_ meillinda test nestl nan h.a gold babi formula reconfirm safeti read url_,1,0.17520000000000002,0.6496,0.17520000000000002
 mention_ simon updat test confirm nestl nan hnuma num gold infant formula safe url_,1,0.0,1.0,0.0
 mention_ want know nestl nan hnuma num gold infant formula safe read url_,1,0.16035,0.6793,0.16035
-mention_ hi want reassur nestl nan hnuma num gold infant formula safe detail url_,2,0.15749999999999997,0.15749999999999997,0.685
 sinc num4 water withdraw fallen num2 food beverag product volum increas num2 url_,0,1.0,0.0,0.0
 ceo p.bulck speak cnn help give supplier difficult financi period video url_,1,0.16685,0.6663,0.16685
 proud won num4 stockholm industri water award url_ water sustain csvnum4,0,1.0,0.0,0.0
@@ -1692,7 +1604,6 @@ mention_ want reassur nestl nan hnumanum gold infant formula safenummor detail u
 mention_ want know nestl nan hnuma num gold safe detail url_,1,0.0,1.0,0.0
 mention_ want know nestl nan hnuma num gold infant formula safe detail url_,1,0.0,1.0,0.0
 mention_ nestl nan hnuma num gold infant formula safe get info url_,1,0.0,1.0,0.0
-mention_ nestl nan hnuma num gold infant formula safe read websit url_,1,0.0,1.0,0.0
 r.thompson univers illinoi see signific improv qualiti life rural commun nestlecsv,0,1.0,0.0,0.0
 mention_ pleas see updat url_ test confirm nestl nan hnuma num gold infant formula safe,1,0.0,1.0,0.0
 nestli uk show support worldwaterday today share effort water reduct url_,0,1.0,0.0,0.0
@@ -1713,7 +1624,6 @@ nestli app media investor avail android info url_,1,0.0,1.0,0.0
 nestli investor call come end join us soon press confer webcast question num4 cet url_,1,0.16265000000000002,0.6747,0.16265000000000002
 nestli italia work farmer optimis water use tomato product watch video url_,1,0.0,1.0,0.0
 mention_ pleas see url_ not issu canadian figur,1,0.17154999999999998,0.6569,0.17154999999999998
-mention_ voluntarili recal limit amount nesquik chocol powder sold us info url_,1,0.15965000000000001,0.6807,0.15965000000000001
 support coffe farmer india part nescaf plan help improv qualiti sustain url_,0,1.0,0.0,0.0
 mention_ updat australian test reconfirm nestl nan hnuma num gold infant formula safe url_,1,0.0,1.0,0.0
 mention_ withdraw guigoz1 limit 1batch no safeti issu franc no market affect withdraw nestl,0,0.6614,0.1693,0.1693
@@ -1747,14 +1657,12 @@ mention_ withdraw guigoz1 limit num batch franc no babi food safeti issu nestl,0
 mention_ withdraw guigoz1 limit num batch franc no babi food safeti issu nestl,0,0.6422,0.1789,0.1789
 mention_ withdraw guigoz1 limit num batch franc no babi food safeti issu nestl,0,0.6668,0.16660000000000003,0.16660000000000003
 mention_ withdraw guigoz1 limit num batch franc no babi food safeti issu nestl,0,0.6609,0.16954999999999998,0.16954999999999998
-check out video water educ programm india url_ wwweek csvnum4,1,0.0,1.0,0.0
 see bioplast futur packag check out 2nd part a. roulinua interview mention_ url_ packag csv,1,0.16399999999999998,0.672,0.16399999999999998
 lar thunel ceo intern financ corpor member world bank group say financ key csvnum4,0,1.0,0.0,0.0
 delight gain ftse4good accredit read dow jone report url_ login requir,1,0.16125,0.6775,0.16125
 nestli strengthen scientif commit china new laboratori partnership health url_,0,1.0,0.0,0.0
 ipad app includ interest list top investor relat app url_ ir,0,1.0,0.0,0.0
 strong q1 sale announc url_,0,1.0,0.0,0.0
-ui water sanit num3 num3 cite duaivoir cocoa communitiesu url_ via mention_ nestl,0,1.0,0.0,0.0
 first csv prize award ide cambodia num4 csv forum london nestlecsv,0,1.0,0.0,0.0
 strengthen product capac europ new invest hungari url_,0,1.0,0.0,0.0
 chairman call ban replac food product fuel product read mention_ live blog url_ nestl,1,0.0,1.0,0.0
@@ -1790,7 +1698,6 @@ receiv stockholm industri water award today recogn commit water url_ wwweek csvn
 juli howard deputi coordin develop usaid speak csv forum watch live discuss url_ csvnum4,1,0.0,1.0,0.0
 michael porter professor harvard busi school compani work creat share valu concept csvnum4,0,1.0,0.0,0.0
 thank work ahead rtmention_ updat call greenpeac mention_ hour tell nestlu_ cont url_,2,0.1683,0.1683,0.6634
-water post-num4 millennium develop goal strategi read new post chairmanua blog url_ waterchalleng,1,0.0,1.0,0.0
 fiona terri tedxrc2 stage virtu challeng respons provid neutral humanitarian aid follow url_,1,0.16860000000000003,0.6628,0.16860000000000003
 nestl among top num effect advertis around globe accord mention_ url_,0,0.6629,0.16854999999999998,0.16854999999999998
 juli howard pleas see presid obama engag issu food secur csvnum4,0,1.0,0.0,0.0
@@ -1799,25 +1706,21 @@ area like child labour no competit work need work j. lopez evp global oper,0,1.0
 neutral incred import characterist aid organis fiona terri tedxrc2,0,0.6809,0.15955000000000003,0.15955000000000003
 nestl franc voluntarili recal singl batch lnum5 banana babi food appli franc info url_,1,0.16685,0.6663,0.16685
 nestli complet rebuild project chile url_,0,1.0,0.0,0.0
-help ruralwomen dairi farmer india increas product produc higher-qu milk target educ url_,0,1.0,0.0,0.0
 today intual day ruralwomen find out help empow femal farmer pakistan url_ url_,1,0.0,1.0,0.0
 nestl ceo uiresili reactive.w perman work better futur resili focus thing believ wef,0,1.0,0.0,0.0
 mention_ voluntarili recal limit amount nesquik chocol powder sold us info url_,1,0.0,1.0,0.0
 mention_ voluntarili recal limit amount nesquik chocol powder sold us info url_,1,0.0,1.0,0.0
 weuar open first nestl research develop centr india read url_,1,0.0,1.0,0.0
 boost research develop switzerland extend product technolog centr konolfingen url_,0,1.0,0.0,0.0
-mention_ australian test reconfirm nestl nan hnuma num gold infant formula safe updat url_,2,0.16285,0.16285,0.6743
 nestli health scienc ceo lui cantarel uiour stake accera strateg step forward build brain health portfolio,0,1.0,0.0,0.0
 nestli health scienc buy stake us firm accera make medic food prescrib alzheim 's patient url_,0,1.0,0.0,0.0
 nestli news ap nestli health scienc acquisit url_,0,1.0,0.0,0.0
 lot peopl tri right thing need break silo work togeth josi lopez nestlecocoa,0,0.6602,0.1699,0.1699
 long term develop goal someth everybodi need recogn auret van heerden presid fla. nestlecocoa,0,1.0,0.0,0.0
-import thing commit erad child labour annual target transpar report say auret van heerden fla,0,1.0,0.0,0.0
 uiin num4 renov portfolio improv health nutrit profil num num3 productsu nestl ceo pnumbulck nestleagm,0,1.0,0.0,0.0
 live webcast chairman p. brabeck talk nestliua strong financi result num4 url_ nestleagm nestl,0,0.6582,0.1709,0.1709
 mention_ commit address child labour problem read fla websit url_ nestl,1,0.0,1.0,0.0
 dialogu listen never mani mean commun reach mention_ tedxrc2,0,1.0,0.0,0.0
-know support nearli num3 initi support unit nation 's millennium develop goal url_,0,1.0,0.0,0.0
 mention_ thank concern nestea product never test anim find out url_,1,0.17154999999999998,0.6569,0.17154999999999998
 mention_ mention_ clarif scope voluntari babi food recal franc url_,0,0.6459999999999999,0.17700000000000005,0.17700000000000005
 mention_ mention_ clarif scope voluntari babi food recal franc url_ gerber,2,0.16410000000000002,0.16410000000000002,0.6718
@@ -1831,7 +1734,6 @@ nutrir programm ecuador teach children grow fresh fruit veget url_ wfdnum4,0,0.6
 uyou charg bodyua healthi kid programm japan help children adopt healthi diet url_ wfdnum4,0,1.0,0.0,0.0
 beslenebilirim eat well find out weuar help children turkey learn healthi eat url_ wfdnum4,1,0.0,1.0,0.0
 help address micronutri defici develop world url_ wfdnum4 url_,0,1.0,0.0,0.0
-nestl ceo paul bulck ofd wef uimanag obes epidem requir collabor multi-stakehold approach.u,0,1.0,0.0,0.0
 chairman peterbrabeck take part session wef today sustain growth develop nestlecsv,0,1.0,0.0,0.0
 mention_ voluntarili recal limit amount nesquik chocol powder sold us info url_,1,0.0,1.0,0.0
 mention_ voluntarili recal limit amount nesquik chocol powder sold us info url_,1,0.16185,0.6763,0.16185
@@ -1842,7 +1744,6 @@ top carbon disclosur project 's num4 list global compani cut greenhous ga emiss 
 favorit healthi afternoon snack url_,1,0.16360000000000002,0.6728,0.16360000000000002
 mention_ mention_ test reconfirm safeti nestl nan hnuma num gold url_,1,0.0,1.0,0.0
 corpor head agricultur write global food thought new approach agricultur develop url_,0,1.0,0.0,0.0
-congratul mirga gra_inyte-tyla lithuania winner nestli salzburg festiv young conductor award url_,2,0.0,0.0,1.0
 weuav reaffirm commit support num2 num3 coffe farmer household vietnam url_ nestl,0,1.0,0.0,0.0
 mention_ read import action take num4 tackl child labour issu url_,0,0.6963,0.15184999999999998,0.15184999999999998
 mention_ read import action take num4 tackl child labour issu url_,0,0.6747,0.16265000000000002,0.16265000000000002
@@ -1957,7 +1858,6 @@ mention_ believ access water human right not drain develop countriesua groundwat
 launch nestl career facebook page like learn work nestl url_ url_,1,0.0,1.0,0.0
 mention_ not drain develop countriesua groundwat believ access water human right url_,0,0.6675,0.16625,0.16625
 mention_ not drain develop countriesua groundwat believ access water human right url_,0,0.6728,0.16360000000000002,0.16360000000000002
-mention_ not drain develop countriesua groundwat believ access water human right url_,0,1.0,0.0,0.0
 mention_ not drain develop countriesua groundwat believ access water human right url_,0,0.6675,0.16625,0.16625
 mention_ not drain develop countriesua groundwat believ access water human right url_,0,0.6689,0.16554999999999997,0.16554999999999997
 mention_ not drain develop countriesua groundwat believ access water human right url_,0,0.6675,0.16625,0.16625
@@ -1982,7 +1882,6 @@ l freix say hold event athen show support one countri affect crisi greec employm
 ioanni vroutsi job not creat law ministeri decrees-onli explos invest entrepreneurship employment4youth,0,1.0,0.0,0.0
 pleas welcom greek labour minist ioanni vroutsi open event live webcast athen url_ employment4youth,0,0.6496,0.17520000000000002,0.17520000000000002
 video nestl head zone europ explain weuall open work opportun young peopl url_ employment4youth,0,0.6668,0.16660000000000003,0.16660000000000003
-video find out weuar readi even help europeua young peopl get work employment4youth url_ nestl,1,0.16265000000000002,0.6747,0.16265000000000002
 nestl long tradit recruit young peopl weuar help num2 europ find work url_,0,1.0,0.0,0.0
 .mention_ believ access water human right not drain develop countriesua groundwat url_,0,1.0,0.0,0.0
 .mention_ not drain pakistanua water firmli believ access water human right url_,0,0.6614,0.1693,0.1693
@@ -2045,7 +1944,6 @@ nestl chairman skin health uia new platform consider size profit growthu,0,1.0,0
 nestl chairman skin health offer uia wide rang innov scientif proven productsu,0,1.0,0.0,0.0
 nestl ceo uinestliua ambit enhanc qualiti consumerua live nutrit health wellnessu,0,1.0,0.0,0.0
 nestl chairman peter brabeck solid growth area activ improv margin,0,1.0,0.0,0.0
-nestli mexico launch first product lactos intoler children num-num year old url_,0,1.0,0.0,0.0
 nestl ceo kitchen uo malaysian make healthi pledg url_ url_,0,1.0,0.0,0.0
 compani invest women mean better health educ busi via mention_ url_,0,1.0,0.0,0.0
 food question reput url_ italian via mention_,0,1.0,0.0,0.0
@@ -2111,10 +2009,8 @@ icymi nestl acquir aesthet dermatolog asset nestli skin health url_,0,1.0,0.0,0.
 nestli itali win award youth employ initi url_ employment4youth url_,0,1.0,0.0,0.0
 studi could smooth lump powder drink url_ goodfoodgoodlif url_,0,1.0,0.0,0.0
 look microscop new studi nestl scientist url_ goodfoodgoodlif,0,0.6614,0.1693,0.1693
-.mention_ thank christina today favourit smarti goodfoodgoodlif url_,2,0.16265000000000002,0.16265000000000002,0.6747
 live webcast num4 nestl investor seminar begin num2 minut num2 num2 cet url_,1,0.0,1.0,0.0
 .mention_ keep good work ed employment4youth,2,0.16125,0.16125,0.6775
-live webcast num4 nestl investor seminar take place today numnum2pm cet url_,1,0.0,1.0,0.0
 wouldnuat great oven recognis food knew precis cook url_,1,0.0,1.0,0.0
 yesterday healthykid lit broadway nestl mention_ sport star url_,0,1.0,0.0,0.0
 num4 tsunami destroy rail line mention_ work sanriku railway help url_ url_,0,1.0,0.0,0.0
@@ -2122,7 +2018,6 @@ nestl un women hold talk gender equal url_ via mention_,0,1.0,0.0,0.0
 paul bulck healthier kid perform better school product adultsnumit virtuou circl url_ wefnum4,0,1.0,0.0,0.0
 health ethic capit water develop take look topic discuss wefnum4 url_ via mention_,1,0.0,1.0,0.0
 'health wealth panel davo arianna talk franci s. collin paul bulck joseph jime ... url_ via mention_,0,1.0,0.0,0.0
-ceo discuss health w/ mention_ wefnum4 video panel discuss avail url_ url_,1,0.0,1.0,0.0
 arianna huffington despit huge challeng facing-w tip point recognis health wealth wefnum4 mention_,0,1.0,0.0,0.0
 franci collin not see talk world econom without consid role health wefnum4 mention_,0,1.0,0.0,0.0
 paul bulck current healthcar system not go work econom focus correct not prevent wefnum4,0,1.0,0.0,0.0
@@ -2149,7 +2044,6 @@ start wefnum4 panel 'break silo develop live webcast url_ mention_,0,0.6573,0.17
 chairman mention_ mention_ mention_ wefnum4 panel 'break silo develop num4cet url_,0,1.0,0.0,0.0
 nestl ceo paul bulck nestli skin health base core valu r plu innov promis pipelin product,0,1.0,0.0,0.0
 nestl ceo paul bulck nestli skin health part nutrit health well strategi broaden horizon ..,0,1.0,0.0,0.0
-peter brabeck nestl chairman nestli continu support develop loreal past num2 year url_,0,1.0,0.0,0.0
 peter brabeck nestl chairman nestl expand activ medic skin treatment,0,1.0,0.0,0.0
 loreal stake galderma transfer nestl nestl skin health built foundat galderma,0,1.0,0.0,0.0
 nestl sell part stake loreal creat new compani nestl skin health url_,0,1.0,0.0,0.0
@@ -2169,11 +2063,9 @@ nestl ceo uiour long-term strateg direct leader nutrit health wellness.u url_,0,
 nestl ceo uiw increas brand support acceler innov ensur price sensit consum needsu num4 full-year result,0,1.0,0.0,0.0
 power peopl world defin healthi live url_ via mention_ wefnum4,0,1.0,0.0,0.0
 hear ceo wefnum4 discuss health sat num2 jan. live webcast num4cet url_ davo url_,1,0.16125,0.6775,0.16125
-a*star partner nestli boost food nutrit r url_ via mention_,0,1.0,0.0,0.0
 new partnership singapor strengthen food scienc technolog expertis url_ url_,0,1.0,0.0,0.0
 look forward take part wefnum4 week info activ event url_ mention_,1,0.0,1.0,0.0
 itua nation immun awar month teen get health tip learn vaccin prevent diseas url_,1,0.16610000000000003,0.6678,0.16610000000000003
-know adult vaccin rate far behind children speak doctor pharmacist need vaccin,1,0.16265000000000002,0.6747,0.16265000000000002
 num2 ynumo scientist/canc research jack andraka discuss work aspir url_,0,1.0,0.0,0.0
 women quit smoke even num2s/num2 still reclaim health benefit enjoy nonsmok url_,0,1.0,0.0,0.0
 pfizer sponsor uwild medicin heal plant around world exhibit mention_ url_,0,1.0,0.0,0.0
@@ -2192,7 +2084,6 @@ nih fund collabor w/ industri identifi new use exist compound url_,0,1.0,0.0,0.0
 excit work mention_ new ra campaign rtra check out url_ w/ mention_,1,0.16185,0.6763,0.16185
 mani us feel uistress outu stress becom seriou health problem url_,0,0.6614,0.1693,0.1693
 june lgbt pride month num2 consecut yr pfe earn 'num3 score mention_ corpor equal index url_,0,1.0,0.0,0.0
-pfizer pleas partner cytomx new oncolog research collabor url_,0,1.0,0.0,0.0
 american believ commun ill-prepar age popul new survey reveal url_,0,1.0,0.0,0.0
 pfe sponsor seri talk healthi age mention_ url_ htlginum4 mention_,0,1.0,0.0,0.0
 num2num million children worldwid not complet vaccin num2 month accord mention_ learn url_,1,0.0,1.0,0.0
@@ -2313,12 +2204,10 @@ candac sue tsn serv great case studi har power social media engag convers scienc
 heather young uiw excit present tsn stemsummit inspir use social media deepen interest stem topic,0,1.0,0.0,0.0
 num4 pfizer global health fellow ghf tanya owen address health issu underserv popul china url_,0,1.0,0.0,0.0
 pfizer global health fellow ghf receiv health volunt oversea golden appl award commit global health india,0,1.0,0.0,0.0
-tsnua jon milton take pride work mention_ read curios desir challeng statu quo url_,1,0.0,1.0,0.0
 learn pfizerua global health fellow volunt program link core busi mention_ 3rd annual icvconf today,1,0.1648,0.6704,0.1648
 pfizer colleagu discuss ghf global health fellow volunt program tomorrowua icvconf washington,0,1.0,0.0,0.0
 num4 pfizer global health fellow brandford gid address health issu underserv popul rwanda url_,0,1.0,0.0,0.0
 u.s. tobacco use still primari prevent caus morbid tsnua tamara evan discuss cessat measur url_,0,1.0,0.0,0.0
-part work senior save num2b medicin thru donut hole coverag drug compani help provid url_,0,1.0,0.0,0.0
 num4 pfizer global health fellow ghf susan blakeney address health issu underserv popul india url_,0,1.0,0.0,0.0
 collodi silver around sinc num4 safe use treat infect burn discuss url_ tsn,1,0.0,1.0,0.0
 num4 pfizer global health fellow carlo bello address health issu underserv popul uganda url_,0,1.0,0.0,0.0
@@ -2384,7 +2273,6 @@ num million american lost healthcar last sever year learn help url_,1,0.0,1.0,0.
 pfizer global health fellow todd schettini address health issu underserv popul new york url_,0,1.0,0.0,0.0
 afib common sustain cardiac arrhythmia affect 6m peopl europ escparisnum4,0,1.0,0.0,0.0
 afib common sustain cardiac arrhythmia affect approxim 5m peopl unum escparisnum4,0,1.0,0.0,0.0
-pfizer celebr nation health center week southwest commun health center ct. learn more-url_,1,0.0,1.0,0.0
 pfizer global health fellow yoland morri address health issu underserv popul rwanda url_,0,1.0,0.0,0.0
 diabet asthma cancer good news theyuar non-communic bad news kill peopl hiv url_,0,1.0,0.0,0.0
 work patient need rx help pfizer tool help get medicin url_,0,0.6536,0.17320000000000002,0.17320000000000002
@@ -2412,7 +2300,6 @@ share brighter tomorrow hemophilia scholarship program avail student hemophilia,
 pfizer invit public view listen webcast pfizer present healthcar confer url_,1,0.16685,0.6663,0.16685
 prevent therapi mean infus clottingfactor given activ may caus bleed,0,1.0,0.0,0.0
 think scienc member brian nunnal discuss max planckua work energi light frequenc url_,0,1.0,0.0,0.0
-pat ford senior director global secur pfizer discuss counterfeit medicin hartford courant live health chat,0,1.0,0.0,0.0
 pat ford senior director global secur pfizer discuss counterfeit medicin april num2 url_,0,1.0,0.0,0.0
 pat ford pfizer senior director global secur discuss counterfeit drug apr num2 url_,0,1.0,0.0,0.0
 smoke youuar stress honor stress awar month learn healthier way manag pressur url_,1,0.1669,0.6662,0.1669
@@ -2455,7 +2342,6 @@ new studi find heavi smoke increas risk develop alzheimerua vascular dementia ur
 trade brief esmo today discuss target data pan-her inhibitor nsclc num2 num2 turquois num room milan convent center,0,1.0,0.0,0.0
 trade report brief esmo tomorrow discuss data pan-her inhibitor nsclc num2 num2 turquois num room milan convent center,0,1.0,0.0,0.0
 dr. camidg discuss activ novel alk-inhibitor green hall num+num num2 num2 cest url_,0,1.0,0.0,0.0
-ray kerin vp wwc speak todayua bdi build healthcar commun social technolog webinar url_,0,1.0,0.0,0.0
 improv math scienc educ discuss adam gilbert think scienc url_,1,0.0,1.0,0.0
 take motiv healthi habit start tm pfizer canada say start smidg tm url_,0,1.0,0.0,0.0
 u.s. help break cycl global poverti diseas discuss tamara evan think scienc url_,1,0.0,1.0,0.0
@@ -2487,7 +2373,6 @@ pfizer post detail interact w/u. physician healthcar profession clinic research 
 studi show prevenar num2* immunogen young children previous vaccin prevenar* url_,0,1.0,0.0,0.0
 congratul pfizerua maintain program prweek 's healthcar campaign year num4 url_,2,0.17154999999999998,0.17154999999999998,0.6569
 ray kerin vp extern affair commun name prweekua pr profession year num4 url_,0,1.0,0.0,0.0
-stay healthi visit morethanmedication.ca tip advic help hint url_,1,0.16185,0.6763,0.16185
 apixaban statist superior enoxaparin prevent venou thromboembol read url_,1,0.0,1.0,0.0
 uiproject runwayuasu tim gunn return address psoriasisa empow patient confid person style url_,0,1.0,0.0,0.0
 pfizer mediv announc result num phase num studi dimebon alzheimerua diseas clinic develop program url_,0,1.0,0.0,0.0
@@ -2515,7 +2400,6 @@ pre clinton pfizer mylan lower price med patient w/ drug-resist hiv develop coun
 salli susman chief commun offic speak simon vlog view challeng face pharma url_,0,1.0,0.0,0.0
 want hear discuss w/cfo frank duaamelio bmo 's capit market 9th annual focu healthcar confer url_,1,0.0,1.0,0.0
 part pfizer commun sr. mgn posit avail check out url_ enter us job id num5,1,0.0,1.0,0.0
-nice bdi social media confer morn great job done present host,2,0.16125,0.16125,0.6775
 busi develop institut social commun healthcar case studi roundtabl url_,0,1.0,0.0,0.0
 salli susman pfizerua svp chief commun offic speak exl pharmaua 5th annual pr comm summit url_,0,1.0,0.0,0.0
 pfizer invit public listen webcast pfizer discuss healthcar confer url_,1,0.0,1.0,0.0
@@ -2538,7 +2422,6 @@ dr. mace rothenberg dir clinic develop oncolog speaks/w patt morrison/num2num kp
 latino usa anchor maria hinojosa join pfizer host town hall la focu attent cancer latino commun,0,1.0,0.0,0.0
 startrek teach peopl ethic read tsnua mention_ reflect trekkerua spinalchord injuri url_,0,0.6582,0.1709,0.1709
 mobil health key patient support manag varieti way includ adher monitor url_ tsn,0,1.0,0.0,0.0
-doctor debat whether routin autism screen children benefici not url_ tsn,0,1.0,0.0,0.0
 pfizer acquir ferrosanua consum healthcar busi url_,0,1.0,0.0,0.0
 pfizer invit public listen webcast pfizer discuss morgan stanley global healthcar confer url_,1,0.1678,0.6644,0.1678
 rt uimention_ dr. freda lewis-hal ask get old way want url_ healthyagingmonthu,0,0.6602,0.1699,0.1699
@@ -2569,7 +2452,6 @@ pfizer wyeth divest certain anim health asset boehring ingelheim url_,0,1.0,0.0,
 pfizer comment essenti health benefit mean access right treatment afford out-of-pocket cost url_,0,1.0,0.0,0.0
 num4 pfizer global health fellow janet white address health issu underserv popul uganda ghf url_,0,1.0,0.0,0.0
 tsn member vera rulon discuss much healthcar technolog startrek becom realiti url_ healthcar,0,1.0,0.0,0.0
-nation associ board pharmaci pfizer educ patient counterfeit medicin onlin url_,0,1.0,0.0,0.0
 pfizerua medicin safeti site provid explic instruct report ae url_ call num-num3-num3-num4,1,0.173,0.654,0.173
 non-adher medicin major healthcar cost contributor url_,0,1.0,0.0,0.0
 thinksciencenowua mention_ talk role mobil technolog healthcar url_ mobilehealth mhealth,0,0.6602,0.1699,0.1699
@@ -2600,7 +2482,6 @@ bridget walsh appoint vice presid feder govern relat url_,0,1.0,0.0,0.0
 pfizer r presid mikael dolsten speak forbeshealth num4 panel drugresearch url_,0,1.0,0.0,0.0
 pfizer evp lauri olson coalit w/ mention_ exampl collabor work lupu,0,1.0,0.0,0.0
 pfizer evp lauri olson lupu must collabor new way relentlessli bring knowledg bear diseas mention_,0,1.0,0.0,0.0
-pfizer recogn w/ corpor leadership award mention_ num4 nation gala lupu,0,1.0,0.0,0.0
 dolsten forbeshealth forbesrx pfizer build network r model togeth academ biotech partner,0,1.0,0.0,0.0
 dolsten forbeshealth forbesrx moment converg w/ scienc tech come togeth extraordinari way patient innov,0,1.0,0.0,0.0
 pfizer vp jack watter keep caregiv healthi key mention_ bbglec,0,0.6623,0.16885,0.16885
@@ -2727,7 +2608,6 @@ columbia univ prof discuss prevent care age url_,0,1.0,0.0,0.0
 pfizer collabor mention_ microbiom research obes url_,0,1.0,0.0,0.0
 pfizer collabor uk univers global medic excel cluster research rarediseas url_,0,1.0,0.0,0.0
 mention_ mention_ announc 1m grant program support metastat breastcanc awar edu servic url_,0,1.0,0.0,0.0
-pfe open new state-of-the-art research develop facil cambridg mass url_,0,1.0,0.0,0.0
 pfe acquir melanocortin receptor cmpnd mention_ includ small molecul develop collab w/ mention_ url_,0,1.0,0.0,0.0
 pfizer cellecti enter global strateg cancer immunotherapi collabor url_,0,1.0,0.0,0.0
 ann roulin head packag design talk mention_ work eco-packag url_ packag csv,0,0.6848,0.15760000000000002,0.15760000000000002
