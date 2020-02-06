@@ -94,7 +94,7 @@ def train_evaluate(net_params):
     ece_test = ece_score(y_test_hard.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy())
     precision, recall, f1, _ = precision_recall_fscore_support(y_test_hard, y_pred, average='macro', beta=1)
 
-    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy(), title_suffix='MLP1-SemiSoft (ECE={:1.4f})'.format(ece_test))
+    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy(), title_suffix='MLP1-Hard (ECE={:1.4f})'.format(ece_test))
     print('------------')
     print('*Evaluation on test data (SemiSoft), epoch {}*'.format(epoch))
     print('Test ECE: {:1.4f}'.format(ece_test))
@@ -173,9 +173,10 @@ if __name__ == "__main__":
     # evaluate on test data
     if is_evaluation_experiment:
         net_params = {
-            'lr_rate': 0.05,
+            'lr_rate': 0.1,
             'weight_decay': 0.0001,
-            'class_weight': torch.Tensor([1, 5, 5]),
-            'epochs': 10
+            'class_weight': torch.Tensor([1, 3, 3]),
+            'epochs': 481
         }
         train_evaluate(net_params)
+        print(net_params)
