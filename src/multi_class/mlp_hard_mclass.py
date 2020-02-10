@@ -91,10 +91,10 @@ def train_evaluate(net_params):
         loss_test_hard = CrossEntropyLossHard(outputs_test, y_test_hard).item()
         # Get predictions from the maximum value
         _, y_pred = torch.max(torch.sigmoid(outputs_test).data, 1)
-    ece_test = ece_score(y_test_hard.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy())
+    ece_test = ece_score(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy())
     precision, recall, f1, _ = precision_recall_fscore_support(y_test_hard, y_pred, average='macro', beta=1)
 
-    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test)[:, 1].numpy(), title_suffix='MLP1-Hard (ECE={:1.4f})'.format(ece_test))
+    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='MLP1-Hard (ECE={:1.4f})'.format(ece_test))
     print('------------')
     print('*Evaluation on test data (SemiSoft), epoch {}*'.format(epoch))
     print('Test ECE: {:1.4f}'.format(ece_test))
