@@ -17,9 +17,9 @@ def train_clf():
         'LogisticRegression': {
             'clf__C': [0.001, 0.01, 0.1, 1, 10, 100],
             'clf__penalty': ['l2'],
-            'clf__class_weight': ['balanced', {0: 1, 1: 1}, {0: 1, 1: 2},
-                                  {0: 1, 1: 3}, {0: 1, 1: 5}, {0: 1, 1: 7},
-                                  {0: 1, 1: 10}, {0: 1, 1: 12}]
+            'clf__class_weight': ['balanced',
+                                  {0: 1, 1: 1, 2: 3}, {0: 1, 1: 2.5, 2: 5}, {0: 1, 1: 4, 2: 7},
+                                  {0: 1, 1: 7, 2: 10}, {0: 1, 1: 8, 2: 12}]
         },
         'LinearSVC': {
             'clf__C': [0.001, 0.01, 0.1, 1, 10, 100],
@@ -79,12 +79,16 @@ def train_evaluate(params):
     y_pred_proba = model.predict_proba(X_test_tfidf)
 
     precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average='macro', beta=1)
+    _, _, f01, _ = precision_recall_fscore_support(y_test, y_pred, average='macro', beta=0.1)
+    _, _, f10, _ = precision_recall_fscore_support(y_test, y_pred, average='macro', beta=10)
     acc = accuracy_score(y_test, y_pred)
     ece = ece_score(y_test, y_pred_proba)
 
     plot_reliability_diagram(y_test, y_pred_proba, title_suffix='LogisticRegression (ECE={:1.4f})'.format(ece))
     print('*Evaluation on test data, {}*'.format(model.__class__.__name__))
     print('F1: ', f1)
+    print('F0.1: ', f01)
+    print('F10: ', f10)
     print('ECE: {:1.4f}'.format(ece))
     print('Precision: ', precision)
     print('Recall: ', recall)
@@ -94,9 +98,9 @@ def train_evaluate(params):
 if __name__ == "__main__":
     data_folder = '../../data/multi_class/clean/'
     res_folder = '../../res/'
-    dataset_files = ['6_train_gop_rel_only_mclass.csv',
-                     '6_val_gop_rel_only_mclass.csv',
-                     '6_test_gop_rel_only_mclass.csv']
+    dataset_files = ['8_train_drug_relation_mclass.csv',
+                     '8_val_drug_relation_mclass.csv',
+                     '8_test_drug_relation_mclass.csv']
     text_column, label_column = 'text', 'crowd_label'
     # load and transform data
     data_params = {
@@ -117,8 +121,8 @@ if __name__ == "__main__":
     if is_evaluation_experiment:
         params = {'C': 1,
                   'penality': 'l2',
-                  'class_weight': {0: 1, 1: 3},
-                  'max_features': None,
-                  'ngram_range': (1, 3),
-                  'min_df': 2}
+                  'class_weight': 'balanced',
+                  'max_features': 15000,
+                  'ngram_range': (1, 2),
+                  'min_df': 0}
         train_evaluate(params)
