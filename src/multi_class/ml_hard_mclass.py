@@ -18,8 +18,8 @@ def train_clf():
             'clf__C': [0.001, 0.01, 0.1, 1, 10, 100],
             'clf__penalty': ['l2'],
             'clf__class_weight': ['balanced',
-                                  {0: 1, 1: 1, 2: 3}, {0: 1, 1: 2.5, 2: 5}, {0: 1, 1: 4, 2: 7},
-                                  {0: 1, 1: 7, 2: 10}, {0: 1, 1: 8, 2: 12}]
+                                  {0: 1, 1: 2, 2: 3}, {0: 1, 1: 3, 2: 5}, {0: 1, 1: 5, 2: 7},
+                                  {0: 1, 1: 7, 2: 10}, {0: 1, 1: 9, 2: 12}]
         },
         'LinearSVC': {
             'clf__C': [0.001, 0.01, 0.1, 1, 10, 100],
@@ -98,9 +98,9 @@ def train_evaluate(params):
 if __name__ == "__main__":
     data_folder = '../../data/multi_class/clean/'
     res_folder = '../../res/'
-    dataset_files = ['8_train_drug_relation_mclass.csv',
-                     '8_val_drug_relation_mclass.csv',
-                     '8_test_drug_relation_mclass.csv']
+    dataset_files = ['9_train_deaths_in_india_satp_mclass.csv',
+                     '9_val_deaths_in_india_satp_mclass.csv',
+                     '9_test_deaths_in_india_satp_mclass.csv']
     text_column, label_column = 'text', 'crowd_label'
     # load and transform data
     data_params = {
