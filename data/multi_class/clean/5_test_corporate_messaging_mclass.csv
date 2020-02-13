@@ -1,19 +1,19 @@
 text,gold_label,crowd_label,conf0,conf1,conf2
 congrat argentina rt mention_ mention_ citivolunt num3year diadelacomunidad url_,2,2,0,0,1
 thank rt mention_ mention_ num3+ costa rica citivolunt celebr global commun day parqu la libertad url_,2,2,0,0,1
-use crowdsourc mention_ rejuven one danish capit 's neighborhood url_ ftcitiaward,1,1,0,1,0
-live webcast num4 nestl investor seminar take place today numnum2pm cet url_,1,1,0,1,0
+use crowdsourc mention_ rejuven one danish capit 's neighborhood url_ ftcitiaward,0,1,0,1,0
+live webcast num4 nestl investor seminar take place today numnum2pm cet url_,0,1,0,1,0
 foundat strategi commit valu integr learn ethic complianc program url_,1,1,0,1,0
 tsnua jon milton take pride work mention_ read curios desir challeng statu quo url_,1,1,0,1,0
 know adult vaccin rate far behind children speak doctor pharmacist need vaccin,1,1,0.16265000000000002,0.6747,0.16265000000000002
-rt mention_ thank mention_ volunt mention_ today citivolunt,0,0,0.6614,0.1693,0.1693
+rt mention_ thank mention_ volunt mention_ today citivolunt,2,0,0.6614,0.1693,0.1693
 excit day would like thank guest attend follow tune congratul winner award,2,2,0.16670000000000001,0.16670000000000001,0.6666
 great photo rt mention_ citivolunt mention_ cali colombia url_,2,2,0,0,1
 uth road safer cyclingua latest video ucycl cityua seri navig road safe url_,0,0,0.6656,0.16720000000000002,0.16720000000000002
 citi team usa flag tour stop jacksonvil celebr sponsorship num4 unum olymp paralymp team url_,0,0,1,0,0
 mention_ nestl nan hnuma num gold infant formula safe read websit url_,1,1,0,1,0
 pat ford senior director global secur pfizer discuss counterfeit medicin hartford courant live health chat,0,0,1,0,0
-congratul num4 ftcitiaward global winner mention_ rt congratul url_,2,2,0,0,1
+congratul num4 ftcitiaward global winner mention_ rt congratul url_,1,2,0,0,1
 know support nearli num3 initi support unit nation 's millennium develop goal url_,0,0,1,0,0
 mention_ right take care health celebr day,2,2,0,0,1
 mention_ cool pic thank share,2,2,0,0,1
@@ -42,14 +42,14 @@ danon strateg partner mention_ year 's edit co-construct globalcnum4,0,0,1,0,0
 congratul mirga gra_inyte-tyla lithuania winner nestli salzburg festiv young conductor award url_,2,2,0,0,1
 great photo rt mention_ aksi pembuatan lubang serapan biopori citibank bandung citivolunt mention_ url_,2,2,0.16185,0.16185,0.6763
 moment away learn name ftcitiaward winner stay tune congratul url_,1,1,0,1,0
-mention_ not drain develop countriesua groundwat believ access water human right url_,0,0,1,0,0
+mention_ not drain develop countriesua groundwat believ access water human right url_,2,0,1,0,0
 hayfestiv goodby everyon leav hay today hope enjoy travel home safe url_,2,2,0.16525,0.16525,0.6695
 congratul juli dean mention_ win barclay outstand achiev award fasttracknum3 entrepreneur sme,2,2,0.16265000000000002,0.16265000000000002,0.6747
-num tip success manag remot project url_ via mention_,1,1,0,1,0
+num tip success manag remot project url_ via mention_,0,1,0,1,0
 mention_ voluntarili recal limit amount nesquik chocol powder sold us info url_,1,1,0.15965000000000001,0.6807,0.15965000000000001
 check out video water educ programm india url_ wwweek csvnum4,1,1,0,1,0
 nestl ceo paul bulck ofd wef uimanag obes epidem requir collabor multi-stakehold approach.u,0,0,1,0,0
-mention_ hi want reassur nestl nan hnuma num gold infant formula safe detail url_,2,2,0.15749999999999997,0.15749999999999997,0.685
+mention_ hi want reassur nestl nan hnuma num gold infant formula safe detail url_,2,2,0.15749999999999997,0.15749999999999997,685
 rt mention_ downsid control-freak philanthropi url_,0,0,1,0,0
 kickstart rais african farmer out poverti sustainabletechnolog not aid url_ progressmak,0,0,1,0,0
 proud part mention_ launch a3 project improv medic adher learn url_,1,1,0,1,0
@@ -82,7 +82,7 @@ check out bewel health tip url_,1,1,0,1,0
 great day volunt rt mention_ citivolunt hard work beauti day url_,2,2,0.16845,0.16845,0.6631
 balanc entrepreneurship fatherhood tip make parenthood startup life work togeth url_ mention_,1,1,0.16615000000000002,0.6677,0.16615000000000002
 new barclay report track sharehold chang uk ireland busi measur entrepreneuri activ url_,0,0,1,0,0
-congrat year 's uncfmrk award recipi check out photo url_,2,2,0.17514999999999997,0.17514999999999997,0.6497
+congrat year 's uncfmrk award recipi check out photo url_,1,2,0.17514999999999997,0.17514999999999997,0.6497
 danon 's stori one social innov co-creat said e. faber danoneua coo gsbsnum4 mention_,0,0,1,0,0
 agre rt mention_ citivolunt today sens satisfact belief citi sure make differ,2,2,0.16265000000000002,0.16265000000000002,0.6747
 barclay wealth support 'women year award url_,0,0,1,0,0
@@ -116,6 +116,6 @@ philanthrop program abil make posit differ learn url_,1,1,0,1,0
 enter worldwid collabor w/ mention_ market develop novel therapi cardiovascular disease.url_,0,0,1,0,0
 rt mention_ mention_ great follow citivolunt contribut around world global commun day,2,2,0,0,1
 mention_ pleas tweet forward right person pleas allow holiday delay,2,2,0,0,1
-mention_ hi app seem work check out url_,1,1,0.1683,0.6634,0.1683
+mention_ hi app seem work check out url_,2,1,0.1683,0.6634,0.1683
 danon water tour seasid town franc 3rd yr summer 1st time brazil spain promot healthi hydrat,0,0,1,0,0
-mention_ australian test reconfirm nestl nan hnuma num gold infant formula safe updat url_,2,2,0.16285,0.16285,0.6743
+mention_ australian test reconfirm nestl nan hnuma num gold infant formula safe updat url_,1,2,0.16285,0.16285,0.6743
