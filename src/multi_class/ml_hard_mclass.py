@@ -50,7 +50,12 @@ def train_clf():
     param_grid = {**param_vectorizer, **hyperparams_grid[model_name]}
 
     k = 5  # number of splits in CV
-    grid = GridSearchCV(pipeline, cv=k, param_grid=param_grid, scoring='f1_macro', n_jobs=4, verbose=1)
+    num_classes = len(set(y_train_val))
+    if num_classes == 2:
+        scoring = 'f1'
+    else:
+        scoring = 'f1_macro'
+    grid = GridSearchCV(pipeline, cv=k, param_grid=param_grid, scoring=scoring, n_jobs=4, verbose=1)
     grid.fit(X_train_val, y_train_val)
 
     score_mean = grid.cv_results_['mean_test_score'][grid.best_index_]
@@ -78,9 +83,15 @@ def train_evaluate(params):
     y_pred = model.predict(X_test_tfidf)
     y_pred_proba = model.predict_proba(X_test_tfidf)
 
-    precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average='macro', beta=1)
-    _, _, f01, _ = precision_recall_fscore_support(y_test, y_pred, average='macro', beta=0.1)
-    _, _, f10, _ = precision_recall_fscore_support(y_test, y_pred, average='macro', beta=10)
+    # check if binary or multi class classification
+    num_classes = len(set(y_test))
+    if num_classes == 2:
+        average = 'binary'
+    else:
+        average = 'macro'
+    precision, recall, f1, _ = precision_recall_fscore_support(y_test, y_pred, average=average, beta=1)
+    _, _, f01, _ = precision_recall_fscore_support(y_test, y_pred, average=average, beta=0.1)
+    _, _, f10, _ = precision_recall_fscore_support(y_test, y_pred, average=average, beta=10)
     acc = accuracy_score(y_test, y_pred)
     ece = ece_score(y_test, y_pred_proba)
 
