@@ -109,7 +109,7 @@ def train_evaluate(net_params):
     _, _, f01, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=0.1)
     _, _, f10, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=10)
 
-    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='FFnet-Hard (ECE={:1.4f})'.format(ece_test))
+    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='NN-Hard (ECE={:1.4f})'.format(ece_test))
     print('------------')
     print('*Evaluation on test data (SemiSoft), epoch {}*'.format(epoch))
     print('Test ECE: {:1.4f}'.format(ece_test))

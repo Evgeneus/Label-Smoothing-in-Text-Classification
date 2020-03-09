@@ -199,3 +199,4 @@ if __name__ == "__main__":
             'epochs': 100
         }
         train_evaluate(net_params)
+        print(net_params)
