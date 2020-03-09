@@ -29,6 +29,13 @@ def train_neural_net(net_params, tolerance=20):
     err = float('inf')
     val_stat = []
 
+    # check if binary or multi class classification
+    num_classes = len(y_train_hard.unique())
+    if num_classes == 2:
+        average = 'binary'
+    else:
+        average = 'macro'
+
     for epoch in range(1, int(epochs) + 1):
         model.train()
         optimizer.zero_grad()
@@ -44,7 +51,7 @@ def train_neural_net(net_params, tolerance=20):
             loss_val = criterion_val(outputs_val, y_val_soft).item()
             ece_val = ece_score(y_val_hard.numpy(), torch.sigmoid(outputs_val).numpy())
             _, y_pred = torch.max(torch.sigmoid(outputs_val).data, 1)
-            pre_val, rec_val, f1_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average='macro', beta=1)
+            pre_val, rec_val, f1_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average=average, beta=1)
             acc_val = accuracy_score(y_val_hard, y_pred)
         val_stat.append([loss_val, pre_val, rec_val, acc_val, epoch, ece_val, f1_val])
 
@@ -93,11 +100,17 @@ def train_evaluate(net_params):
         # Get predictions from the maximum value
         _, y_pred = torch.max(torch.sigmoid(outputs_test).data, 1)
     ece_test = ece_score(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy())
-    precision, recall, f1, _ = precision_recall_fscore_support(y_test_hard, y_pred, average='macro', beta=1)
-    _, _, f01, _ = precision_recall_fscore_support(y_test_hard, y_pred, average='macro', beta=0.1)
-    _, _, f10, _ = precision_recall_fscore_support(y_test_hard, y_pred, average='macro', beta=10)
+    # check if binary or multi class classification
+    num_classes = len(y_test_hard.unique())
+    if num_classes == 2:
+        average = 'binary'
+    else:
+        average = 'macro'
+    precision, recall, f1, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=1)
+    _, _, f01, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=0.1)
+    _, _, f10, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=10)
 
-    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='FFnet-Soft (ECE={:1.4f})'.format(ece_test))
+    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='NN-SemiHard (ECE={:1.4f})'.format(ece_test))
     print('------------')
     print('*Evaluation on test data (SemiSoft), epoch {}*'.format(epoch))
     print('Test ECE: {:1.4f}'.format(ece_test))
