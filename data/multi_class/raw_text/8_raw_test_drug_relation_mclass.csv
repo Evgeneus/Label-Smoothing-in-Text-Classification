@@ -57,7 +57,7 @@ text,gold_label,crowd_label,conf0,conf1,conf2
 "I have plenty of ""<font color=""red"">rashes</font>""1500mg pentasa twice daily, 40mg humira weekly, prilosec ,calcium, <font color=""blue"">magnesium</font>, diovan, amlodipine, lyricaBack to Top",0,0,1,0,0
 """ <font color=""blue"">Testosterone</font> therapy in men with <font color=""red"">prostate cancer</font>: scientific and ethical considerations.",1,1,0.15975,0.6805,0.15975
 "Has anyone developed a <font color=""red"">rash</font> after switching to <font color=""blue"">Infergen</font>?",2,2,0.16110000000000002,0.16110000000000002,0.6778
-"Quote:													Originally Posted by Shanny													Actually, T1s can develop <font color=""blue"">insulin</font> resistance, and often DO, if there's been <font color=""red"">weight gain</font> or other mitigating factors.",0,0,0.6556,0.17220000000000002,0.17220000000000002
+"Quote:													Originally Posted by Shanny													Actually, T1s can develop <font color=""blue"">insulin</font> resistance, and often DO, if there's been <font color=""red"">weight gain</font> or other mitigating factors.",1,0,0.6556,0.17220000000000002,0.17220000000000002
 "Hi, <font color=""red"">Hair loss</font> is one of the <font color=""blue"">Warfarin</font>-related side effects.",1,1,0,1,0
 "just wondering - lowered my <font color=""blue"">dose of synthroid</font> - began <font color=""red"">muscle aches</font> and leg jerks only on one sidecan it be from the lower dose",2,2,0.17564999999999997,0.17564999999999997,0.6487
 "Does anyone have any experience with any other types of supplements/<font color=""blue"">vitamins</font> that have been helpful in relieving <font color=""red"">hypo symtoms</font> as well as boosting they thyroid function?",2,2,0,0,1
