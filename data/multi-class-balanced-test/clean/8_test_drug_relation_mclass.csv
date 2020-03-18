@@ -1,6 +1,5 @@
 text,gold_label,crowd_label,conf0,conf1,conf2
 norepinephrin basic adrenalin obvious need energi much could stimul sometim drug oversimul might hard peopl caus anxieti nervou system problem,1,1,0.177599999999999,0.6448,0.177599999999999
-use use lexapro appar folk gener not like weight gain se evid support use tricycl,1,1,0.15685,0.6863,0.15685
 over use insulin compens over compens period no activ caus weight gain overr not caus weight gain,1,1,0.0,1.0,0.0
 give cipro infect meclizin dizziness/disorient,0,0,1.0,0.0,0.0
 yesterday go anoth blood test num day hcg risen num3 progesteron drop num3,0,0,0.7059,0.14705,0.14705
@@ -15,6 +14,7 @@ concern much insulin produc bodi take glucos get low blood sugar,1,1,0.0,1.0,0.0
 hear lot antidepress may make mouth dri,1,1,0.0,1.0,0.0
 think peopl alot cyst accutan might harder time stay clear afterward,2,2,0.16325,0.16325,0.6735
 wonder xanax help anxieti depress get sleepi,2,2,0.15775,0.15775,0.6845
+jerriefibromyalgia degen disc diseas rheumatiod arthriti depress asthmacymbalta savella neurotin predison morphin percocet break painjuiceplu coqnum2 malic-acid/magnesium probiot fish oilback top,1,1,0.158999999999999,0.682,0.158999999999999
 addit autism diagnos huge number develop countri american pharmaceut compani ship thimeros contain vaccin,1,1,0.0,1.0,0.0
 almost off prednison petechia still gone howev pain ankl return,0,0,1.0,0.0,0.0
 anyon levemir give crazi muscl ach tired,2,2,0.0,0.0,1.0
@@ -22,6 +22,7 @@ num2 week heartburn take away appetit milk major part diet along bread vitamin i
 would someth mix cocain powder filthi dirti drug never know gettin u not know allerg,1,1,0.1757,0.6486,0.1757
 two nice effect smaller dose insulin mean lower risk uncomfort low blood sugar less insulin make easier control weight gain,1,1,0.0,1.0,0.0
 ps vitamin caus constip stop vitamin got low hemoglobin back vitamin back constip ...,0,0,1.0,0.0,0.0
+cranberri juic prevent infect alreadi one not sure much get rid,1,1,0.16665,0.6667,0.16665
 regard mood swing prednison,2,2,0.16665,0.16665,0.6667
 find inform theweb nicotin shown effect anxieti ocd smallgroup studi new therapi not fulli studi,1,1,0.0,1.0,0.0
 tri benazepril cozaar could not toler cough spasm,0,0,1.0,0.0,0.0
@@ -34,7 +35,6 @@ ever tri steroid see help fluid retent moon face,2,2,0.0,0.0,1.0
 wrote stomach pain ... .. filler use ldn capsul,2,2,0.0,0.0,1.0
 num2mg cortisol adren fatigu issu armor thyroid hypo,1,1,0.17345,0.6531,0.17345
 peopl consum 5g taurin day use clen decreas cramp significantli,1,1,0.0,1.0,0.0
-methotrex infrequ report side effect includ flu-lik symptom nausea vomit headach fatigu diarrhea low white blood cell count,1,1,0.0,1.0,0.0
 went yasmin teen even sex period would make nauseou would go home sick school throw much,0,0,1.0,0.0,0.0
 abilifi caus weight gain anoth way supposedli link caus diabet,1,1,0.15,0.7,0.15
 num2i not figur out manic synthriod experienc hypo hyper symptom,0,0,1.0,0.0,0.0
@@ -45,7 +45,6 @@ wonder insulin gliclizid prone hypo,2,2,0.0,0.0,1.0
 aspirin sever year also suffer stomach ulcer come off time,0,0,1.0,0.0,0.0
 run out hydrocodon 'scrip fill sunday still withdraw symptom take contin ms,2,2,0.0,0.0,1.0
 unfortun start immuran num month ago caus even hair loss,0,0,1.0,0.0,0.0
-num2 year old need know erectil dysfunct caus high dosag lamict current,2,2,0.0,0.0,1.0
 sorri hear not good experi trilept consid need migrain prevent well limit ...,0,0,0.6596,0.1702,0.1702
 anyon syptom went antibiot werent dizzi anymor,2,2,0.0,0.0,1.0
 recent switch wellbutrin celexa becam nauseau fatigu ...,0,0,1.0,0.0,0.0
@@ -61,6 +60,7 @@ wonder lower dose synthroid began muscl ach leg jerk one sidecan lower dose,2,2,
 anyon experi type supplements/vitamin help reliev hypo symtom well boost thyroid function,2,2,0.0,0.0,1.0
 also anyon stick ssri anorgasmia went away chang ssri morn better result anorgasmia,2,2,0.163049999999999,0.163049999999999,0.6739
 lucki not end liver damag mani other unwittingli took serzon,0,0,0.6447,0.177649999999999,0.177649999999999
+like thisyear get flu vaccin thimeros much mercuryi actual flu shot,2,2,0.0,0.0,1.0
 diarrhea everi time ingest anyth not fun not want intern bleed warfarin,0,0,1.0,0.0,0.0
 first took metformin num3mg twice day right hospit stay first diagnosi type num experienc nausea stomach ach heartburn headach ga side effect,0,0,1.0,0.0,0.0
 word caution stop take magnesium citrat peopl get diarrhea easili citrat,1,1,0.0,1.0,0.0
