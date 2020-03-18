@@ -27,7 +27,7 @@ model = RobertaForSequenceClassification(config)
 
 ## Feature Preparation
 def prepare_features(seq_1, max_seq_length = 300,
-             zero_pad = False, include_CLS_token = True, include_SEP_token = True):
+             zero_pad = True, include_CLS_token = True, include_SEP_token = True):
     ## Tokenzine Input
     tokens_a = tokenizer.tokenize(seq_1)
 
@@ -103,7 +103,7 @@ if torch.cuda.is_available():
     model = model.cuda()
 
 # Parameters
-params = {'batch_size': 1,
+params = {'batch_size': 30,
           'shuffle': True,
           'drop_last': False,
           'num_workers': 1}
@@ -132,7 +132,7 @@ for epoch in tqdm(range(max_epochs)):
     print("EPOCH -- {}".format(epoch))
     for i, (sent, label) in enumerate(training_loader):
         optimizer.zero_grad()
-        sent = sent.squeeze(0)
+        sent = sent.squeeze(1)
         if torch.cuda.is_available():
             sent = sent.cuda()
             label = label.cuda()
@@ -159,12 +159,7 @@ for epoch in tqdm(range(max_epochs)):
                 _, predicted = torch.max(output.data, 1)
                 y_pred.append(predicted.item())
                 total += label.size(0)
-            #     correct += (predicted.cpu() == label.cpu()).sum()
-            # accuracy = 100.00 * correct.numpy() / total
             model.train()
-            # print('Iteration: {}. Loss: {}. Accuracy: {}%'.format(i, loss.item(), accuracy))
-            # print("y_val_hard: ", y_val_hard)
-            # print("y_pred: ", y_pred)
             pre_val, rec_val, f1_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average='binary', beta=1)
             print('Iteration: {}. Validation, Loss: {}. F1: {:1.3f}, Precision: {:1.3f}, Recall: {:1.3f}'.
                   format(i, loss.item(), f1_val, pre_val, rec_val))
