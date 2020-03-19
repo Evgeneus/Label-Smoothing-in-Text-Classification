@@ -3,16 +3,16 @@ from torch.autograd import Variable
 from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
 
-from src.multi_class.model import MLP1
-from src.multi_class.data_loader import load_data_mlp
-from src.multi_class.utils import ece_score, plot_reliability_diagram
+from src.nnets.model import MLP1
+from src.nnets.data_loader import load_data_mlp
+from src.nnets.utils import ece_score, plot_reliability_diagram
 
 
 torch_seed = 2020
 torch.manual_seed(torch_seed)
 
 
-def train_neural_net(net_params, tolerance=100):
+def train_neural_net(net_params, tolerance=20):
     # define NNet and training process
     lr_rate = net_params['lr_rate']
     weight_decay = net_params['weight_decay']
@@ -109,7 +109,7 @@ def train_evaluate(net_params):
     _, _, f01, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=0.1)
     _, _, f10, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=10)
 
-    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='NN-Hard (ECE={:1.4f})'.format(ece_test))
+    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='NN (ECE={:1.4f})'.format(ece_test))
     print('------------')
     print('*Evaluation on test data (SemiSoft), epoch {}*'.format(epoch))
     print('Test ECE: {:1.4f}'.format(ece_test))
@@ -122,25 +122,12 @@ def train_evaluate(net_params):
 
 
 if __name__ == "__main__":
-    data_folder = '../../data/multi_class/clean/'
+    data_folder = '../../data/multi-class-balanced-test/clean/'
     res_folder = '../../res/'
-    # dataset_files = ['5_train_corporate_messaging_mclass.csv',
-    #                  '5_val_corporate_messaging_mclass.csv',
-    #                  '5_test_corporate_messaging_mclass.csv']
-    # dataset_files = ['7_train_sentiment_twitter_self_drive_mclass.csv',
-    #                  '7_val_sentiment_twitter_self_drive_mclass.csv',
-    #                  '7_test_sentiment_twitter_self_drive_mclass.csv']
-    # res_path = res_folder + '9_res_hard_deaths_in_india_satp_mclass.csv'
-    dataset_files = ['10_train_gop_subject_mclass.csv',
-                     '10_val_gop_subject_mclass.csv',
-                     '10_test_gop_subject_mclass.csv']
-    # dataset_files = ['11_train_sentiment_deflategate_mclass.csv',
-    #                  '11_val_sentiment_deflategate_mclass.csv',
-    #                  '11_test_sentiment_deflategate_mclass.csv']
-    # dataset_files = ['8_train_drug_relation_mclass.csv',
-    #                  '8_val_drug_relation_mclass.csv',
-    #                  '8_test_drug_relation_mclass.csv']
-    # res_path = res_folder + '11_res_hard_sentiment_deflategate_mclass.csv'
+    dataset_files = ['5_train_corporate_messaging_mclass.csv',
+                     '5_val_corporate_messaging_mclass.csv',
+                     '5_test_corporate_messaging_mclass.csv']
+    res_path = res_folder + '5_res_corporate_messaging_mclass.csv'
 
     # load and transform data
     data_params = {
@@ -148,9 +135,9 @@ if __name__ == "__main__":
         'data_folder': data_folder,
         'text_column': 'text',
         'label_column': 'crowd_label',
-        'min_df': 0,
-        'max_features': None,
-        'ngram_range': (1, 2)
+        'min_df': 2,
+        'max_features': 30000,
+        'ngram_range': (1, 3)
 
     }
     data = load_data_mlp(**data_params)
@@ -176,15 +163,14 @@ if __name__ == "__main__":
 
     if not is_evaluation_experiment:
         # init header of res file
-        # with open(res_path, 'w') as f:
-        #     c = 'loss_val, pre_val, rec_val, acc_val, epoch, ece_val, f1_val, lr_rate, weight_decay, class_weight'
-        #     f.write(c + '\n')
+        with open(res_path, 'w') as f:
+            c = 'loss_val, pre_val, rec_val, acc_val, epoch, ece_val, f1_val, lr_rate, weight_decay, class_weight'
+            f.write(c + '\n')
 
         epochs = 500
-        for lr_rate in [0.01]:
-            for weight_decay in [0.0001]:
-                for class_weight in [[7,2, 1]]:
-                # for class_weight in [[1, 2, 3, 5, 9], [1, 4, 4, 7, 13], [1, 5, 5, 10, 15]]:
+        for lr_rate in [0.1, 0.01, 0.001]:
+            for weight_decay in [0.01, 0.001, 0.0001, 0.00001]:
+                for class_weight in [[1, 3, 3], [1, 5, 5], [1, 7, 7], [1, 10, 10], [1, 12, 12]]:
                     class_weight = torch.Tensor(class_weight)
                     net_params = {
                         'lr_rate': lr_rate,
@@ -195,19 +181,19 @@ if __name__ == "__main__":
                     print('---------------------')
                     val_res = train_neural_net(net_params)
 
-                    # with open(res_path, 'a') as f:
-                    #     s = ''
-                    #     for i in val_res + [lr_rate, weight_decay, class_weight.numpy()]:
-                    #         s += str(i) + ','
-                    #     f.write(s[:-1] + '\n')
+                    with open(res_path, 'a') as f:
+                        s = ''
+                        for i in val_res + [lr_rate, weight_decay, class_weight.numpy()]:
+                            s += str(i) + ','
+                        f.write(s[:-1] + '\n')
 
     # evaluate on test data
     if is_evaluation_experiment:
         net_params = {
-            'lr_rate': 0.1,
+            'lr_rate': 0.01,
             'weight_decay': 0.0001,
-            'class_weight': torch.Tensor([1., 3., 3., 3., 3.]),
-            'epochs': 321
+            'class_weight': torch.Tensor([1., 3., 3.]),
+            'epochs': 275
         }
         train_evaluate(net_params)
         print(net_params)

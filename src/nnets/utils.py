@@ -6,14 +6,16 @@ from netcal.metrics import ECE
 
 class CrossEntropyLossSoft(nn.Module):
 
-    def __init__(self, weight=torch.Tensor([1, 1, 1])):
+    def __init__(self, weight=None):
         super(CrossEntropyLossSoft, self).__init__()
         self.weight = weight
 
     def forward(self, pred, soft_targets):
         logsoftmax = nn.LogSoftmax()
-
-        return torch.mean(torch.sum(- soft_targets * self.weight * logsoftmax(pred), 1))
+        if self.weight is not None:
+            return torch.mean(torch.sum(- soft_targets * self.weight * logsoftmax(pred), 1))
+        else:
+            return torch.mean(torch.sum(- soft_targets * logsoftmax(pred), 1))
 
 
 def smooth_one_hot(true_labels: torch.Tensor, classes: int, smoothing=0.0):
@@ -43,3 +45,4 @@ def ece_score(y_true, y_prob, n_bins=10):
 def plot_reliability_diagram(y_true, y_prob, n_bins=10, title_suffix=''):
     diagram = ReliabilityDiagram(n_bins)
     diagram.plot(y_prob, y_true, title_suffix)
+
