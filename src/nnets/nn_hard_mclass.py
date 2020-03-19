@@ -136,7 +136,7 @@ if __name__ == "__main__":
         'text_column': 'text',
         'label_column': 'crowd_label',
         'min_df': 2,
-        'max_features': 30000,
+        'max_features': None,
         'ngram_range': (1, 3)
 
     }
@@ -190,10 +190,10 @@ if __name__ == "__main__":
     # evaluate on test data
     if is_evaluation_experiment:
         net_params = {
-            'lr_rate': 0.01,
-            'weight_decay': 0.0001,
-            'class_weight': torch.Tensor([1., 3., 3.]),
-            'epochs': 275
+            'lr_rate': 0.1,
+            'weight_decay': 0.00001,
+            'class_weight': torch.Tensor([1., 7., 7.]),
+            'epochs': 235
         }
         train_evaluate(net_params)
         print(net_params)

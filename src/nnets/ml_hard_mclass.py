@@ -130,10 +130,10 @@ if __name__ == "__main__":
         train_clf()
 
     if is_evaluation_experiment:
-        params = {'C': 1,
+        params = {'C': 100,
                   'penality': 'l2',
-                  'class_weight':  {0: 1, 1: 3, 2: 3},
-                  'max_features': 30000,
+                  'class_weight':  'balanced',
+                  'max_features': 25000,
                   'ngram_range': (1, 2),
-                  'min_df': 0}
+                  'min_df': 2}
         train_evaluate(params)

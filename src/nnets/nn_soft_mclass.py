@@ -136,9 +136,9 @@ if __name__ == "__main__":
         'data_folder': data_folder,
         'text_column': 'text',
         'label_column': 'crowd_label',
-        'min_df': 0,
-        'max_features': 30000,
-        'ngram_range': (1, 2)
+        'min_df': 2,
+        'max_features': None,
+        'ngram_range': (1, 3)
     }
     data = load_data_mlp(**data_params)
     X_train_tfidf, y_train_soft, y_train_hard = data['train']
@@ -192,10 +192,10 @@ if __name__ == "__main__":
     # evaluate on test data
     if is_evaluation_experiment:
         net_params = {
-            'lr_rate': 0.01,
+            'lr_rate': 0.1,
             'weight_decay': 0.0001,
-            'class_weight': torch.Tensor([1, 5, 5]),
-            'epochs': 106
+            'class_weight': torch.Tensor([1, 10, 10]),
+            'epochs': 445
         }
         train_evaluate(net_params)
         print(net_params)
