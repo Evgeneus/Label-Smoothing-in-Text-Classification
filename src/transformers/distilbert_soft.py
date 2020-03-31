@@ -133,6 +133,26 @@ class DataLoaderSoft(Dataset):
         return self.len
 
 
+class DataLoaderSemiHard(Dataset):
+    def __init__(self, dataframe):
+        self.len = len(dataframe)
+        self.data = dataframe
+
+    def __getitem__(self, index):
+        text = self.data.text[index]
+        X, _ = prepare_features(text)
+        y = self.data.loc[index].iloc[2:].values.astype(float)
+        crowd_label = self.data.loc[index].crowd_label
+        for ind in range(len(y)):
+            if ind != crowd_label:
+                y[ind] = 0.
+
+        return X, y
+
+    def __len__(self):
+        return self.len
+
+
 def ece_score(y_true, y_prob, n_bins=10):
     ece = ECE(n_bins)
     ece_val = ece.measure(y_prob, y_true)
@@ -192,6 +212,7 @@ print("TRAIN Dataset: {}".format(train_dataset.shape))
 print("VAL Dataset: {}".format(val_dataset.shape))
 print("TEST Dataset: {}".format(test_dataset.shape))
 training_set = DataLoaderSoft(train_dataset)
+# training_set = DataLoaderSemiHard(train_dataset)  # uncomment if to use SemiHard smoothing
 validating_set = DataLoaderHard(val_dataset)
 testing_set = DataLoaderHard(test_dataset)
 
