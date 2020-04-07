@@ -47,6 +47,20 @@ np.random.seed(seed)
 random.seed(seed)
 
 
+class CrossEntropyLossSoft(nn.Module):
+
+    def __init__(self, weight=None):
+        super(CrossEntropyLossSoft, self).__init__()
+        self.weight = weight
+
+    def forward(self, pred, soft_targets):
+        logsoftmax = nn.LogSoftmax()
+        if self.weight is not None:
+            return torch.mean(torch.sum(- soft_targets * self.weight * logsoftmax(pred), 1))
+        else:
+            return torch.mean(torch.sum(- soft_targets * logsoftmax(pred), 1))
+
+
 config = DistilBertConfig.from_pretrained('distilbert-base-cased')
 config.num_labels = 3
 
@@ -102,6 +116,42 @@ class DataLoaderHard(Dataset):
         return self.len
 
 
+class DataLoaderSoft(Dataset):
+    def __init__(self, dataframe):
+        self.len = len(dataframe)
+        self.data = dataframe
+
+    def __getitem__(self, index):
+        text = self.data.text[index]
+        X, _ = prepare_features(text)
+        y = self.data.loc[index].iloc[2:].values.astype(float)
+
+        return X, y
+
+    def __len__(self):
+        return self.len
+
+
+class DataLoaderSemiHard(Dataset):
+    def __init__(self, dataframe):
+        self.len = len(dataframe)
+        self.data = dataframe
+
+    def __getitem__(self, index):
+        text = self.data.text[index]
+        X, _ = prepare_features(text)
+        y = self.data.loc[index].iloc[2:].values.astype(float)
+        crowd_label = self.data.loc[index].crowd_label
+        for ind in range(len(y)):
+            if ind != crowd_label:
+                y[ind] = 0.
+
+        return X, y
+
+    def __len__(self):
+        return self.len
+
+
 def ece_score(y_true, y_prob, n_bins=10):
     ece = ECE(n_bins)
     ece_val = ece.measure(y_prob, y_true)
@@ -110,6 +160,7 @@ def ece_score(y_true, y_prob, n_bins=10):
 
 
 def compute_val():
+    loss_function = nn.CrossEntropyLoss()
     with torch.no_grad():
         model.eval()
         y_pred = []
@@ -160,7 +211,7 @@ def compute_val():
 
 if __name__ == "__main__":
     data_folder = '../../data/multi-class-balanced-test/tobert/'
-    log_file = "8-hard-drug_relation_mclass-lr10-6"
+    log_file = "8-soft-drug_relation_mclass-lr10-6"
     res_path = '../../res/' + 'test_' + log_file + '.csv'
 
     train_file = '8_bert_train_drug_relation_mclass.csv'
@@ -170,8 +221,9 @@ if __name__ == "__main__":
 
     print("TRAIN Dataset: {}".format(train_dataset.shape))
     print("TEST Dataset: {}".format(test_dataset.shape))
-    training_set = DataLoaderHard(train_dataset)
-    testing_set = DataLoaderHard(test_dataset)
+    training_set = DataLoaderSoft(train_dataset)
+    # training_set = DataLoaderSemiHard(train_dataset)  # uncomment if to use SemiHard smoothing
+    testing_set = DataLoaderHard(test_dataset)  # uncomment if to use Soft smoothing
 
     # Sampler
     target = train_dataset.crowd_label.values
@@ -190,7 +242,7 @@ if __name__ == "__main__":
 
     # Parameters
     # 'batch_size': 35, max_seq_length = 512 for GPU with 16GB memory
-    params = {'batch_size': 32,
+    params = {'batch_size': 2,
               # 'shuffle': True,
               'drop_last': False,
               'num_workers': 4,
@@ -204,13 +256,13 @@ if __name__ == "__main__":
     training_loader = DataLoader(training_set, **params)
     validating_loader = DataLoader(testing_set, **params_val)
 
-    loss_function = nn.CrossEntropyLoss()
+    loss_function = CrossEntropyLossSoft()
     learning_rate = 1e-06
     optimizer = optim.Adam(params=model.parameters(), lr=learning_rate)
 
     model = model.train()
-    iter_eval = 0
-    epoch_eval = 88
+    iter_eval = 1
+    epoch_eval = 0
     max_epochs = epoch_eval + 1
     for epoch in tqdm(range(max_epochs)):
         print("EPOCH -- {}".format(epoch))
