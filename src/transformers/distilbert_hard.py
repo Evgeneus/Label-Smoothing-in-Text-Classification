@@ -1,3 +1,23 @@
+# !pip install transformers
+# !pip install sklearn
+# !pip install netcal
+#
+# ## Check if Cuda is Available
+# print(torch.cuda.is_available())
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# if torch.cuda.is_available():
+#   print('GPU Properties:   ', torch.cuda.get_device_properties(0))
+#   print('Memory Usage:')
+#   print('Allocated:', round(torch.cuda.memory_allocated(0)/1024**3,1), 'GB')
+#   print('Cached:   ', round(torch.cuda.memory_cached(0)/1024**3,1), 'GB')
+#
+#
+# ## Mount Drive into Colab
+# from google.colab import drive
+# drive.mount('/content/drive')
+# # ////////////////////////////////////////////////////////////
+
+
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
@@ -24,20 +44,6 @@ if torch.cuda.is_available():
   torch.cuda.manual_seed(seed)
 np.random.seed(seed)
 random.seed(seed)
-
-
-# !pip install transformers
-# !pip install sklearn
-# !pip install netcal
-#
-# ## Check if Cuda is Available
-# print(torch.cuda.is_available())
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-# if torch.cuda.is_available():
-#   print('GPU Properties:   ', torch.cuda.get_device_properties(0))
-#   print('Memory Usage:')
-#   print('Allocated:', round(torch.cuda.memory_allocated(0)/1024**3,1), 'GB')
-#   print('Cached:   ', round(torch.cuda.memory_cached(0)/1024**3,1), 'GB')
 
 
 data_folder = '../../data/binary-balanced-test/tobert/'
@@ -91,7 +97,7 @@ def prepare_features(seq_1, max_seq_length = 512,
 
 
 ## Dataset Loader Classes
-class Intents(Dataset):
+class DataLoaderHard(Dataset):
     def __init__(self, dataframe):
         self.len = len(dataframe)
         self.data = dataframe
@@ -99,7 +105,6 @@ class Intents(Dataset):
     def __getitem__(self, index):
         text = self.data.text[index]
         X, _ = prepare_features(text)
-        # TODO:
         y = self.data.crowd_label[index]
 
         return X, y
@@ -166,9 +171,8 @@ test_dataset = pd.read_csv(data_folder + test_file)
 print("TRAIN Dataset: {}".format(train_dataset.shape))
 print("VAL Dataset: {}".format(val_dataset.shape))
 print("TEST Dataset: {}".format(test_dataset.shape))
-training_set = Intents(train_dataset)
-validating_set = Intents(val_dataset)
-testing_set = Intents(test_dataset)
+training_set = DataLoaderHard(train_dataset)
+validating_set = DataLoaderHard(val_dataset)
 
 # Sampler
 target = train_dataset.crowd_label.values
@@ -200,7 +204,6 @@ params_val = {'batch_size': 1,
 
 training_loader = DataLoader(training_set, **params)
 validating_loader = DataLoader(validating_set, **params_val)
-testing_loader = DataLoader(testing_set, **params_val)
 
 # class_weight = torch.Tensor([1, 4])
 # if torch.cuda.is_available():

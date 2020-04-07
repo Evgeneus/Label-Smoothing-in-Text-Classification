@@ -1,3 +1,23 @@
+# !pip install transformers
+# !pip install sklearn
+# !pip install netcal
+#
+# ## Check if Cuda is Available
+# print(torch.cuda.is_available())
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# if torch.cuda.is_available():
+#   print('GPU Properties:   ', torch.cuda.get_device_properties(0))
+#   print('Memory Usage:')
+#   print('Allocated:', round(torch.cuda.memory_allocated(0)/1024**3,1), 'GB')
+#   print('Cached:   ', round(torch.cuda.memory_cached(0)/1024**3,1), 'GB')
+#
+#
+# ## Mount Drive into Colab
+# from google.colab import drive
+# drive.mount('/content/drive')
+# # ////////////////////////////////////////////////////////////
+
+
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
@@ -25,19 +45,6 @@ if torch.cuda.is_available():
 np.random.seed(seed)
 random.seed(seed)
 
-
-# !pip install transformers
-# !pip install sklearn
-# !pip install netcal
-#
-# ## Check if Cuda is Available
-# print(torch.cuda.is_available())
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-# if torch.cuda.is_available():
-#   print('GPU Properties:   ', torch.cuda.get_device_properties(0))
-#   print('Memory Usage:')
-#   print('Allocated:', round(torch.cuda.memory_allocated(0)/1024**3,1), 'GB')
-#   print('Cached:   ', round(torch.cuda.memory_cached(0)/1024**3,1), 'GB')
 
 class CrossEntropyLossSoft(nn.Module):
 
