@@ -4,7 +4,7 @@ from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
 
 from src.nnets.model import MLP1
-from src.nnets.data_loader import load_data_mlp
+from src.nnets.data_loader import load_data_soft
 from src.nnets.utils import CrossEntropyLossSoft
 from src.nnets.utils import ece_score, plot_reliability_diagram
 
@@ -140,7 +140,7 @@ if __name__ == "__main__":
         'max_features': None,
         'ngram_range': (1, 3)
     }
-    data = load_data_mlp(**data_params)
+    data = load_data_soft(**data_params)
     X_train_tfidf, y_train_soft, y_train_hard = data['train']
     X_val_tfidf, y_val_soft, y_val_hard = data['val']
     X_test_tfidf, y_test_hard = data['test']

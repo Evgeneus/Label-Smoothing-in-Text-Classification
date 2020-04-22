@@ -32,19 +32,19 @@ def load_data_ml_hard(dataset_files, data_folder, text_column='text', label_colu
     return X_train, y_train_hard, X_train_val, y_train_val_hard, X_test, y_test_hard
 
 
-def load_data_mlp(dataset_files, data_folder, text_column='text', label_column='crowd_label', min_df=2, max_features=None, ngram_range=(1, 3)):
+def load_data_soft(dataset_files, data_folder, text_column='text', label_column='crowd_label', min_df=2, max_features=None, ngram_range=(1, 3)):
     # train data
     train_file = dataset_files[0]
     assert 'train' in train_file
     df_tr = pd.read_csv(data_folder + train_file)
     X_train = df_tr[text_column].values
     y_train_hard = df_tr[label_column].values
-    # make semi soft target label
-    labels_set = set(df_tr[label_column].unique())
-    for ind, label in enumerate(y_train_hard):
-        for _label in labels_set:
-            if _label == label: continue
-            df_tr.at[ind, 'conf{}'.format(_label)] = 0
+    # # make semi soft target label
+    # labels_set = set(df_tr[label_column].unique())
+    # for ind, label in enumerate(y_train_hard):
+    #     for _label in labels_set:
+    #         if _label == label: continue
+    #         df_tr.at[ind, 'conf{}'.format(_label)] = 0
     y_train_soft = df_tr.iloc[:, 2:].values
 
     # validation data
@@ -53,12 +53,12 @@ def load_data_mlp(dataset_files, data_folder, text_column='text', label_column='
     df_val = pd.read_csv(data_folder + val_file)
     X_val = df_val[text_column].values
     y_val_hard = df_val[label_column].values
-    # make semi soft target label
     labels_set = set(df_val[label_column].unique())
-    for ind, label in enumerate(y_val_hard):
-        for _label in labels_set:
-            if _label == label: continue
-            df_val.at[ind, 'conf{}'.format(_label)] = 0
+    # # make semi soft target label
+    # for ind, label in enumerate(y_val_hard):
+    #     for _label in labels_set:
+    #         if _label == label: continue
+    #         df_val.at[ind, 'conf{}'.format(_label)] = 0
     y_val_soft = df_val.iloc[:, 2:].values
 
     # test data
