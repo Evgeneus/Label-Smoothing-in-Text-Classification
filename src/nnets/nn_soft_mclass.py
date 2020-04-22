@@ -110,9 +110,9 @@ def train_evaluate(net_params):
     _, _, f01, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=0.1)
     _, _, f10, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=10)
 
-    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='NN-SemiHard (ECE={:1.4f})'.format(ece_test))
+    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='NN-Soft (ECE={:1.4f})'.format(ece_test))
     print('------------')
-    print('*Evaluation on test data (SemiSoft), epoch {}*'.format(epoch))
+    print('*Evaluation on test data (Soft), epoch {}*'.format(epoch))
     print('Test ECE: {:1.4f}'.format(ece_test))
     print('Test Loss Hard: {:1.4f}'.format(loss_test_hard))
     print('F1: {:1.3f}'.format(f1))
@@ -128,7 +128,7 @@ if __name__ == "__main__":
     dataset_files = ['5_train_corporate_messaging_mclass.csv',
                      '5_val_corporate_messaging_mclass.csv',
                      '5_test_corporate_messaging_mclass.csv']
-    res_path = res_folder + '5_res_semisoft_corporate_messaging_mclass'
+    res_path = res_folder + '5_res_soft_corporate_messaging_mclass'
 
     # load and transform data
     data_params = {
