@@ -138,47 +138,47 @@ def ece_score(y_true, y_prob, n_bins=10):
 
     return ece_val
 
-
-def compute_val():
-    loss_function = nn.CrossEntropyLoss()
-    with torch.no_grad():
-        model.eval()
-        y_pred = []
-        output_prob_val = []
-        output_logits_val = []
-        y_val_hard = []
-        for sent, label in validating_loader:
-            y_val_hard.append(label.item())
-            sent = sent.squeeze(0)
-            if torch.cuda.is_available():
-                sent = sent.cuda()
-                label = label.cuda()
-            output = model.forward(sent)[0]
-            logit, predicted = torch.max(output.data, 1)
-            output_logits_val.append(output[0].cpu().tolist())
-            output_prob_val.append(torch.sigmoid(output[0]).cpu().tolist())
-            y_pred.append(predicted.item())
-        loss_val = loss_function(torch.Tensor(output_logits_val), torch.LongTensor(y_val_hard)).item()
-        model.train()
-        ece_val = ece_score(np.array(y_val_hard), np.array(output_prob_val))
-
-        # check if binary or multi class classification
-        num_classes = len(set(y_val_hard))
-        if num_classes == 2:
-            average = 'binary'
-        else:
-            average = 'macro'
-        pre_val, rec_val, f1_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average=average, beta=1)
-        _, _, f01_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average=average, beta=0.1)
-        _, _, f10_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average=average, beta=10)
-        print(
-            'Iteration: {}. Train Loss: {:1.5f}. Val Loss: {:1.5f}, F1: {:1.3f}, ECE: {:1.3f}, Precision: {:1.3f}, Recall: {:1.3f}'.
-            format(i, loss.item(), loss_val, f1_val, ece_val, pre_val, rec_val))
-        # print to result file
-        with open(res_path, 'a') as f:
-            res_i = '{}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n'.format(epoch, i, loss.item(), loss_val, pre_val, rec_val,
-                                                                      f01_val, f1_val, f10_val, ece_val)
-            f.write(res_i)
+#
+# def compute_val():
+#     loss_function = nn.CrossEntropyLoss()
+#     with torch.no_grad():
+#         model.eval()
+#         y_pred = []
+#         output_prob_val = []
+#         output_logits_val = []
+#         y_val_hard = []
+#         for sent, label in validating_loader:
+#             y_val_hard.append(label.item())
+#             sent = sent.squeeze(0)
+#             if torch.cuda.is_available():
+#                 sent = sent.cuda()
+#                 label = label.cuda()
+#             output = model.forward(sent)[0]
+#             logit, predicted = torch.max(output.data, 1)
+#             output_logits_val.append(output[0].cpu().tolist())
+#             output_prob_val.append(torch.sigmoid(output[0]).cpu().tolist())
+#             y_pred.append(predicted.item())
+#         loss_val = loss_function(torch.Tensor(output_logits_val), torch.LongTensor(y_val_hard)).item()
+#         model.train()
+#         ece_val = ece_score(np.array(y_val_hard), np.array(output_prob_val))
+#
+#         # check if binary or multi class classification
+#         num_classes = len(set(y_val_hard))
+#         if num_classes == 2:
+#             average = 'binary'
+#         else:
+#             average = 'macro'
+#         pre_val, rec_val, f1_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average=average, beta=1)
+#         _, _, f01_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average=average, beta=0.1)
+#         _, _, f10_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average=average, beta=10)
+#         print(
+#             'Iteration: {}. Train Loss: {:1.5f}. Val Loss: {:1.5f}, F1: {:1.3f}, ECE: {:1.3f}, Precision: {:1.3f}, Recall: {:1.3f}'.
+#             format(i, loss.item(), loss_val, f1_val, ece_val, pre_val, rec_val))
+#         # print to result file
+#         with open(res_path, 'a') as f:
+#             res_i = '{}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n'.format(epoch, i, loss.item(), loss_val, pre_val, rec_val,
+#                                                                       f01_val, f1_val, f10_val, ece_val)
+#             f.write(res_i)
 
 
 def compute_val():
@@ -249,9 +249,6 @@ if __name__ == "__main__":
     data_folder = '../../data/multi-class-balanced-test/tobert/'
     res_path = '../../res/'
     res_path += logfile_name
-    with open(res_path, 'w') as f:
-        c = 'epoch, iter, loss_train, loss_val, pre_val, rec_val, f01_val, f1_val, f10_val, ece_val'
-        f.write(c + '\n')
 
     # configure DistilBERT model
     config = DistilBertConfig.from_pretrained('distilbert-base-cased')
