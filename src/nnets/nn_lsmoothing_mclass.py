@@ -13,7 +13,7 @@ torch_seed = 2020
 torch.manual_seed(torch_seed)
 
 
-def train_neural_net(net_params, tolerance=20):
+def train_neural_net(net_params, tolerance=30):
     # define NNet and training process
     lr_rate = net_params['lr_rate']
     weight_decay = net_params['weight_decay']
@@ -110,7 +110,8 @@ def train_evaluate(net_params):
     _, _, f01, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=0.1)
     _, _, f10, _ = precision_recall_fscore_support(y_test_hard, y_pred, average=average, beta=10)
 
-    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(), title_suffix='NN-LabelSmoothing')
+    plot_reliability_diagram(y_test_hard.numpy(), torch.sigmoid(outputs_test).numpy(),
+                             title_suffix='NN-LabelSmoothing, alpha={}'.format(net_params["alpha"]))
     print('------------')
     print('*Evaluation on test data (NN-LabelSmoothing), epoch {}*'.format(epoch))
     print('Test ECE: {:1.4f}'.format(ece_test))
@@ -129,6 +130,7 @@ if __name__ == "__main__":
                      '5_val_corporate_messaging_mclass.csv',
                      '5_test_corporate_messaging_mclass.csv']
     # load and transform data
+    alpha = 0.1
     data_params = {
         'dataset_files': dataset_files,
         'data_folder': data_folder,
@@ -137,7 +139,7 @@ if __name__ == "__main__":
         'min_df': 2,
         'max_features': None,
         'ngram_range': (1, 3),
-        'alpha': 0.05
+        'alpha': alpha
     }
     res_path = res_folder + '5-lsmooth-corporate_messaging-alpha{}.csv'.format(data_params["alpha"])
     data = load_data_lsmoothing(**data_params)
@@ -194,8 +196,9 @@ if __name__ == "__main__":
         net_params = {
             'lr_rate': 0.1,
             'weight_decay': 0.0001,
-            'class_weight': torch.Tensor([1, 10, 10]),
-            'epochs': 445
+            'class_weight': torch.Tensor([1, 3, 3]),
+            'epochs': 126,
+            'alpha': alpha
         }
         train_evaluate(net_params)
         print(net_params)
