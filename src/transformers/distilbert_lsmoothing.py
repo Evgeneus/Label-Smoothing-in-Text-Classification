@@ -36,7 +36,7 @@ from transformers import DistilBertForSequenceClassification, DistilBertConfig
 from sklearn.metrics import precision_recall_fscore_support
 from netcal.metrics import ECE
 
-# setup rundom seed
+# setup random seed
 seed = 2020
 torch.manual_seed(seed)
 if torch.cuda.is_available():
@@ -186,7 +186,7 @@ if __name__ == "__main__":
     val_file = '5_bert_val_corporate_messaging_mclass.csv'
     num_labels = 3
     class_weight = torch.Tensor([1, 1, 1])
-    batch_size = 1
+    batch_size = 32
     learning_rate = 1e-06
     max_epochs = 100
     alpha = 0.1  # smoothing parameters for true label
