@@ -107,7 +107,7 @@ def train_evaluate(params):
 
 
 if __name__ == "__main__":
-    data_folder = '../../data/multi-class-balanced-test/clean/'
+    data_folder = '../../data/from-figure-eight/balanced-test-data/clean/'
     res_folder = '../../res/'
     dataset_files = ['5_train_corporate_messaging_mclass.csv',
                      '5_val_corporate_messaging_mclass.csv',

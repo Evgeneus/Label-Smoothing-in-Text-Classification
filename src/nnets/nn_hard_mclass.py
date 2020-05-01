@@ -4,7 +4,7 @@ from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
 
 from src.nnets.model import MLP1
-from src.nnets.data_loader import load_data_mlp
+from src.nnets.data_loader import load_data_ml_hard
 from src.nnets.utils import ece_score, plot_reliability_diagram
 
 
@@ -122,7 +122,7 @@ def train_evaluate(net_params):
 
 
 if __name__ == "__main__":
-    data_folder = '../../data/multi-class-balanced-test/clean/'
+    data_folder = '../../data/from-figure-eight/balanced-test-data/clean/'
     res_folder = '../../res/'
     dataset_files = ['5_train_corporate_messaging_mclass.csv',
                      '5_val_corporate_messaging_mclass.csv',
@@ -140,7 +140,7 @@ if __name__ == "__main__":
         'ngram_range': (1, 3)
 
     }
-    data = load_data_mlp(**data_params)
+    data = load_data_ml_hard(**data_params)
     X_train_tfidf, _, y_train_hard = data['train']
     X_val_tfidf, _, y_val_hard = data['val']
     X_test_tfidf, y_test_hard = data['test']

@@ -159,7 +159,7 @@ def compute_val():
 
 
 if __name__ == "__main__":
-    data_folder = '../../data/multi-class-balanced-test/tobert/'
+    data_folder = '../../data/from-figure-eight/balanced-test-data/tobert/'
     log_file = "8-hard-drug_relation_mclass-lr10-6"
     res_path = '../../res/' + 'test_' + log_file + '.csv'
 

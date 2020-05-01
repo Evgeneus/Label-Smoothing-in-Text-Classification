@@ -246,7 +246,7 @@ if __name__ == "__main__":
     # /PARAMETERS
 
     # create log file
-    data_folder = '../../data/multi-class-balanced-test/tobert/'
+    data_folder = '../../data/from-figure-eight/balanced-test-data/tobert/'
     res_path = '../../res/'
     res_path += logfile_name
 

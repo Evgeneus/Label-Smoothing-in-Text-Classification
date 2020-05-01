@@ -46,7 +46,7 @@ np.random.seed(seed)
 random.seed(seed)
 
 
-data_folder = '../../data/binary-balanced-test/tobert/'
+data_folder = '../../data/from-figure-eight/balanced-test-data/tobert/'
 res_path = '../../res/'
 # create log file
 res_path += "1-hard-test_gop_sentiment_binary-lr10-6.csv"

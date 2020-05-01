@@ -60,7 +60,7 @@ class CrossEntropyLossSoft(nn.Module):
             return torch.mean(torch.sum(- soft_targets * logsoftmax(pred), 1))
 
 
-data_folder = '../../data/binary-balanced-test/tobert/'
+data_folder = '../../data/from-figure-eight/balanced-test-data/tobert/'
 res_path = '../../res/'
 # create log file
 res_path += "1-soft-test_gop_sentiment_binary-lr10-6.csv"
