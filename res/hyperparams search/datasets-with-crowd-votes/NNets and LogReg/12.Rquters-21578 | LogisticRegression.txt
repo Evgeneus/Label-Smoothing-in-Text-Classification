@@ -1,0 +1,5 @@
+Gold Labels | LogisticRegression f1:0.877 std: 0.030, using {'clf__C': 100, 'clf__class_weight': {0: 1, 1: 1, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5, 7: 5}, 'clf__penalty': 'l2'}
+MV Labels | LogisticRegression f1:0.318 std: 0.030, using {'clf__C': 0.01, 'clf__class_weight': {0: 1, 1: 1, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5, 7: 5}, 'clf__penalty': 'l2'}
+DS Labels | LogisticRegression f1:0.377 std: 0.034, using {'clf__C': 0.01, 'clf__class_weight': {0: 1, 1: 1, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 3}, 'clf__penalty': 'l2'}
+GLAD Labels | LogisticRegression f1:0.421 std: 0.054, using {'clf__C': 0.01, 'clf__class_weight': {0: 1, 1: 1, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5, 7: 5}, 'clf__penalty': 'l2'}
+LFC Labels | LogisticRegression f1:0.396 std: 0.017, using {'clf__C': 0.01, 'clf__class_weight': {0: 1, 1: 1, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 3}, 'clf__penalty': 'l2'}
