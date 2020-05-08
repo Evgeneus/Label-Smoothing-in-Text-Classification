@@ -54,4 +54,27 @@ This is the reshaped dataset from "Ex Machina: Personal Attacks Seen at Scale" p
     - GLAD accuracy: 0.945,
     - LFC accuracy: 0.942 
 
+Where MV- Majority voting, DS - Dawid and Skene, LFC - learning from crowd (without data features).
+
+#### Data cleaning
+We performed different data preprocessing techniques:
+-   "raw" - original textual data
+-   "clean"- textual data were preprocessed with the following steps:
+
+        - make lowercase
+        - remove punctuation marks
+        - replace english contractions by full words
+        - substitute numbers
+        - remove english stopwords
+        - words lemmatization
+        - words stemming
+        - strip html
+        - removing accented characters
+        - substitute URLs
+        - substitute usernames
+
+BERT tokenizer:
+-   90th percentile: 270.0 tokens
+- 95th percentile: 415.0 tokens
+
 // Source code of the data cleaner used: https://github.com/Evgeneus/NLP-classification-tools //

@@ -1,25 +1,23 @@
-In this dataset, we crowdsource 1000 amazon reviews and the task was to identify whether a  review was written on a book or other product.
-To train classifiers, we used only "_golden"==False reviews as these reviews were used as test questions in crowdsourcing jobs.
+This is the transformed "MovieReviews" dataset from "Deep Learning from Crowds" paper (Filipe Rodrigues et. al.).
 
-If you use this data please cite this paper.
+-->trainl.csv:
+1500 crowdsourced movie reviews, answers are ratings for movies (based on the reviews) from 0 to 10 ==> we converted the ratings into three classes: “negative” [0-3], “middling”(3-7), and “positive”[7-10] reviews.
 
-- 2 Classes: isBook {0, 1}
-- Train size: 1000
-- Val size: 1000
-- Test size:4000
-- Train size crowdsourced: 1000
-- Num of workers: 263
-- Total num. answers: 4907
-- Num. answers per worker (± stddev.): 18.6 ± 4.6
-- Num. answers per instance (± stddev.): 4.9 ± 0.41
-- Mean annotators accuracy (± stddev.): 0.946 ± 0.076
-- Maj. vot. accuracy: MV acciracy: 0.964,
-- DS accuracy: 0.961,
-- GLAD accuracy: 0.964,
-- LFC accuracy: 0.961 
+-->test.csv:
+Test dataset of 3508 reviews with gold labels.
+
+- 3 Classes
+- Train size: 1200
+- Val size: 300
+- Test size: 3508
+- Num. answers per instance (± stddev.): 4.96 ± 0.196
+- Mean annotators accuracy (± stddev.): 0.565 ± 0.258
+- MV acciracy: 0.795,
+- DS accuracy: 0.782,
+- GLAD accuracy: 0.796,
+- LFC accuracy: 0.782
 
 Where MV- Majority voting, DS - Dawid and Skene, LFC - learning from crowd (without data features).
-
 
 #### Data cleaning
 We performed different data preprocessing techniques:
@@ -45,5 +43,5 @@ We performed different data preprocessing techniques:
 
 
 BERT tokenizer:
--   90th percentile: 357.0 tokens
-- 95th percentile: 524.09 tokens
+-   90th percentile: 780.10 tokens
+- 95th percentile: 864.10 tokens
