@@ -17,17 +17,7 @@ def train_clf():
         'LogisticRegression': {
             'clf__C': [0.001, 0.01, 0.1, 1, 10, 100],
             'clf__penalty': ['l2'],
-            'clf__class_weight': ['balanced',
-                                  {0: 1, 1: 2, 2: 3}, {0: 1, 1: 3, 2: 5}, {0: 1, 1: 5, 2: 7},
-                                  {0: 1, 1: 7, 2: 10}, {0: 1, 1: 9, 2: 12}]
-        },
-        'LinearSVC': {
-            'clf__C': [0.001, 0.01, 0.1, 1, 10, 100],
-            'clf__penalty': ['l2'],
-            'clf__loss': ['hinge', 'squared_hinge'],
-            'clf__class_weight': ['balanced', {0: 1, 1: 1}, {0: 1, 1: 2},
-                                  {0: 1, 1: 3}, {0: 1, 1: 5}, {0: 1, 1: 7},
-                                  {0: 1, 1: 10}, {0: 1, 1: 12}]
+            'clf__class_weight': [{0: 1, 1: 1}, {0: 2, 1: 1}]
         }
     }
     param_vectorizer = {
@@ -107,33 +97,33 @@ def train_evaluate(params):
 
 
 if __name__ == "__main__":
-    data_folder = '../../data/from-figure-eight/balanced-test-data/clean/'
-    res_folder = '../../res/'
-    dataset_files = ['5_train_corporate_messaging_mclass.csv',
-                     '5_val_corporate_messaging_mclass.csv',
-                     '5_test_corporate_messaging_mclass.csv']
-    text_column, label_column = 'text', 'crowd_label'
+    data_folder = '../../data/datasets-with-crowd-votes/13.Amazon-isBook/clean/'
+    dataset_files = ['train_MV.csv',
+                     'amazon-isbook-val.csv',
+                     'amazon-isbook-test.csv']
     # load and transform data
     data_params = {
         'dataset_files': dataset_files,
         'data_folder': data_folder,
         'text_column': 'text',
-        'label_column': 'crowd_label',
+        'label_column_train': 'crowd_label',
+        'label_column_val': 'gold_label',
+        'label_column_test': 'gold_label',
     }
-    X_train, y_train, X_train_val, y_train_val, X_test, y_test = load_data_ml_hard(**data_params)
-
     # True if we evaluate model on test set
     # False if we do parameter search for model
     is_evaluation_experiment = True
+
+    X_train, y_train, X_train_val, y_train_val, X_test, y_test = load_data_ml_hard(**data_params)
 
     if not is_evaluation_experiment:
         train_clf()
 
     if is_evaluation_experiment:
-        params = {'C': 100,
+        params = {'C': 10,
                   'penality': 'l2',
-                  'class_weight':  'balanced',
+                  'class_weight':  {0: 2, 1: 1},
                   'max_features': 25000,
-                  'ngram_range': (1, 2),
-                  'min_df': 2}
+                  'ngram_range': (1, 3),
+                  'min_df': 0}
         train_evaluate(params)
