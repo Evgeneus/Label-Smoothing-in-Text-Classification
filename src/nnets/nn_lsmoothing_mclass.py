@@ -124,24 +124,26 @@ def train_evaluate(net_params):
 
 
 if __name__ == "__main__":
-    data_folder = '../../data/from-figure-eight/balanced-test-data/clean/'
-    res_folder = '../../res/'
-    dataset_files = ['5_train_corporate_messaging_mclass.csv',
-                     '5_val_corporate_messaging_mclass.csv',
-                     '5_test_corporate_messaging_mclass.csv']
+    data_folder = '../../data/datasets-with-crowd-votes/13.Amazon-isBook/clean/'
+    res_folder = '../../res/hyperparams search/datasets-with-crowd-votes/13.Amazon-isBook/NNets and LogReg/'
+    dataset_files = ['train_MV.csv',
+                     'amazon-isbook-val.csv',
+                     'amazon-isbook-test.csv']
     # load and transform data
-    alpha = 0.1
+    alpha = 0.05
+    res_path = res_folder + '13_amazon-isbook_lsmooth_alpha{}_MV.csv'.format(alpha)
     data_params = {
         'dataset_files': dataset_files,
         'data_folder': data_folder,
         'text_column': 'text',
-        'label_column': 'crowd_label',
-        'min_df': 2,
-        'max_features': None,
+        'label_column_train': 'crowd_label',
+        'label_column_val': 'gold_label',
+        'label_column_test': 'gold_label',
+        'min_df': 0,
+        'max_features': 30000,
         'ngram_range': (1, 3),
         'alpha': alpha
     }
-    res_path = res_folder + '5-lsmooth-corporate_messaging-alpha{}.csv'.format(data_params["alpha"])
     data = load_data_lsmoothing(**data_params)
     X_train_tfidf, y_train_soft, y_train_hard = data['train']
     X_val_tfidf, y_val_soft, y_val_hard = data['val']
@@ -159,7 +161,7 @@ if __name__ == "__main__":
 
     # True if we evaluate model on test set
     # False if we do parameter search for model
-    is_evaluation_experiment = True
+    is_evaluation_experiment = False
 
     # parameters
     input_dim = X_train_tfidf.shape[1]
@@ -174,7 +176,7 @@ if __name__ == "__main__":
         epochs = 500
         for lr_rate in [0.1, 0.01, 0.001]:
             for weight_decay in [0.01, 0.001, 0.0001, 0.00001]:
-                for class_weight in [[1, 3, 3], [1, 5, 5], [1, 7, 7], [1, 10, 10], [1, 12, 12]]:
+                for class_weight in [[1, 1], [2, 1]]:
                     class_weight = torch.Tensor(class_weight)
                     net_params = {
                         'lr_rate': lr_rate,
@@ -195,9 +197,9 @@ if __name__ == "__main__":
     if is_evaluation_experiment:
         net_params = {
             'lr_rate': 0.1,
-            'weight_decay': 0.0001,
-            'class_weight': torch.Tensor([1, 3, 3]),
-            'epochs': 126,
+            'weight_decay': 0.00001,
+            'class_weight': torch.Tensor([2, 1]),
+            'epochs': 471,
             'alpha': alpha
         }
         train_evaluate(net_params)
