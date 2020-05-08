@@ -13,7 +13,7 @@ torch_seed = 2020
 torch.manual_seed(torch_seed)
 
 
-def train_neural_net(net_params, tolerance=20):
+def train_neural_net(net_params, tolerance=30):
     # define NNet and training process
     lr_rate = net_params['lr_rate']
     weight_decay = net_params['weight_decay']
@@ -21,7 +21,7 @@ def train_neural_net(net_params, tolerance=20):
 
     model = MLP1(input_dim, output_dim)
     criterion = CrossEntropyLossSoft(class_weight)
-    criterion_val = CrossEntropyLossSoft()
+    criterion_val = torch.nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=lr_rate, weight_decay=weight_decay)
 
     # init early stopping
@@ -48,7 +48,7 @@ def train_neural_net(net_params, tolerance=20):
         model.eval()
         with torch.no_grad():
             outputs_val = model(X_val_tfidf)
-            loss_val = criterion_val(outputs_val, y_val_soft).item()
+            loss_val = criterion_val(outputs_val, y_val_hard).item()
             ece_val = ece_score(y_val_hard.numpy(), torch.sigmoid(outputs_val).numpy())
             _, y_pred = torch.max(torch.sigmoid(outputs_val).data, 1)
             pre_val, rec_val, f1_val, _ = precision_recall_fscore_support(y_val_hard, y_pred, average=average, beta=1)
@@ -123,22 +123,24 @@ def train_evaluate(net_params):
 
 
 if __name__ == "__main__":
-    data_folder = '../../data/from-figure-eight/balanced-test-data/clean/'
-    res_folder = '../../res/'
-    dataset_files = ['5_train_corporate_messaging_mclass.csv',
-                     '5_val_corporate_messaging_mclass.csv',
-                     '5_test_corporate_messaging_mclass.csv']
-    res_path = res_folder + '5_res_soft_corporate_messaging_mclass'
+    data_folder = '../../data/datasets-with-crowd-votes/13.Amazon-isBook/clean/'
+    res_folder = '../../res/hyperparams search/datasets-with-crowd-votes/13.Amazon-isBook/NNets and LogReg/'
+    dataset_files = ['train_MV.csv',
+                     'amazon-isbook-val.csv',
+                     'amazon-isbook-test.csv']
+    res_path = res_folder + '13_amazon-isbook_soft_MV.csv'
 
     # load and transform data
     data_params = {
         'dataset_files': dataset_files,
         'data_folder': data_folder,
         'text_column': 'text',
-        'label_column': 'crowd_label',
-        'min_df': 2,
-        'max_features': None,
-        'ngram_range': (1, 3)
+        'label_column_train': 'crowd_label',
+        'label_column_val': 'gold_label',
+        'label_column_test': 'gold_label',
+        'min_df': 0,
+        'max_features': 30000,
+        'ngram_range': (1, 2)
     }
     data = load_data_soft(**data_params)
     X_train_tfidf, y_train_soft, y_train_hard = data['train']
@@ -172,7 +174,7 @@ if __name__ == "__main__":
         epochs = 500
         for lr_rate in [0.1, 0.01, 0.001]:
             for weight_decay in [0.01, 0.001, 0.0001, 0.00001]:
-                for class_weight in [[1, 3, 3], [1, 5, 5], [1, 7, 7], [1, 10, 10], [1, 12, 12]]:
+                for class_weight in [[1, 1], [2, 1]]:
                     class_weight = torch.Tensor(class_weight)
                     net_params = {
                         'lr_rate': lr_rate,
@@ -194,7 +196,7 @@ if __name__ == "__main__":
         net_params = {
             'lr_rate': 0.1,
             'weight_decay': 0.0001,
-            'class_weight': torch.Tensor([1, 10, 10]),
+            'class_weight': torch.Tensor([1, 1]),
             'epochs': 445
         }
         train_evaluate(net_params)
