@@ -33,16 +33,17 @@ def load_data_ml_hard(dataset_files, data_folder, text_column='text', label_colu
     return X_train, y_train_hard, X_train_val, y_train_val_hard, X_test, y_test_hard
 
 
-def load_data_soft(dataset_files, data_folder, text_column='text', label_column='crowd_label',
-                   min_df=2, max_features=None, ngram_range=(1, 3)):
+def load_data_soft(dataset_files, data_folder, text_column='text', label_column_train='crowd_label',
+                   label_column_val='crowd_label', label_column_test='gold_label', min_df=2,
+                   max_features=None, ngram_range=(1, 3)):
     # train data
     train_file = dataset_files[0]
     assert 'train' in train_file
     df_tr = pd.read_csv(data_folder + train_file)
     X_train = df_tr[text_column].values
-    y_train_hard = df_tr[label_column].values
+    y_train_hard = df_tr[label_column_train].values
     # # make semi soft target label
-    # labels_set = set(df_tr[label_column].unique())
+    # labels_set = set(df_tr[label_column_train].unique())
     # for ind, label in enumerate(y_train_hard):
     #     for _label in labels_set:
     #         if _label == label: continue
@@ -54,8 +55,8 @@ def load_data_soft(dataset_files, data_folder, text_column='text', label_column=
     assert 'val' in val_file
     df_val = pd.read_csv(data_folder + val_file)
     X_val = df_val[text_column].values
-    y_val_hard = df_val[label_column].values
-    labels_set = set(df_val[label_column].unique())
+    y_val_hard = df_val[label_column_val].values
+    labels_set = set(df_val[label_column_val].unique())
     # # make semi soft target label
     # for ind, label in enumerate(y_val_hard):
     #     for _label in labels_set:
@@ -68,7 +69,7 @@ def load_data_soft(dataset_files, data_folder, text_column='text', label_column=
     assert 'test' in test_file
     df_test = pd.read_csv(data_folder + test_file)
     X_test = df_test[text_column].values
-    y_test_hard = df_test['gold_label'].values
+    y_test_hard = df_test[label_column_test].values
 
     # compute tfidf features
     tfidf = TfidfVectorizer(min_df=min_df, max_features=max_features,
